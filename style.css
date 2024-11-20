@@ -1,0 +1,36 @@
+.disabled_swiper_button {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+}
+
+#language-popup {
+    display: none;
+    z-index: 10;
+    top: calc(100% + 0.5rem);
+    left: 0;
+}
+#language-popup.active {
+    display: block;
+}
+
+
+
+/* Custom filter drop shadow for hover */
+.hover-custom-filter-shadow:hover {
+    filter: drop-shadow(0 0 8px rgba(107, 174, 69, 1));
+}
+
+.hover-custom-filter-logo:hover{
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.3));
+}
+
+.hover-custom-box-shadow-yellow:hover{
+    box-shadow: 6px 6px 8px #ffc1074a;
+}
+
+.hover-custom-box-shadow-green:hover{
+    box-shadow: 6px 6px 8px #6bae4565;
+}
+
+
