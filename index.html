@@ -15,33 +15,31 @@
 
     <!-- NAV -->
 
-    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-darkGray">
+    <nav id="nav"
+        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-darkGray backdrop-blur-md hover-custom-filter">
 
-        <img src="images/logonav.png" alt="logo" class="w-28 cursor-pointer hover-custom-filter-logo">
+        <img src="images/logonav.png" alt="logo" class="w-28 cursor-pointer hover-custom-filter-logo transition duration-500">
 
-        <ul id="menu-1" class="hidden md:flex items-center gap-10 lg:gap-12
-        text-white font-semibold text-transform: uppercase">
-
+        <ul id="menu-1"
+            class="hidden md:flex items-center gap-10 lg:gap-12 text-white font-semibold text-transform: uppercase">
             <li><a href="#top" class="hover:text-primeGreen transition duration-500">Naslovna</a></li>
             <li><a href="#about" class="hover:text-primeGreen transition duration-500">O Nama</a></li>
             <li><a href="#services" class="hover:text-primeGreen transition duration-500">Usluge</a></li>
             <li><a href="#contact" class="hover:text-primeGreen transition duration-500">Kontakt</a></li>
             <li><a href="#location" class="hover:text-primeGreen transition duration-500">Lokacija</a></li>
             <li><a href="#partners" class="hover:text-primeGreen transition duration-500">Saradnici</a></li>
-
         </ul>
 
         <div class="relative text-white flex items-center gap-5">
-
-            <button class="flex items-center gap-1 w-20 justify-between 
-            hover-custom-filter-shadow transition duration-500" id="language-button">
+            <button
+                class="flex items-center gap-1 w-20 justify-between hover-custom-filter-shadow transition duration-500"
+                id="language-button">
                 <img src="images/globe-icon.png" alt="language-change" class="w-8">
                 <span class="text-sm md:text-base font-medium">Srpski</span>
             </button>
 
-            <div id="language-popup" class="hidden absolute text-black mt-2 left-0 bg-white 
-                border border-gray-300 shadow-md rounded-md w-40">
-
+            <div id="language-popup"
+                class="hidden absolute text-black mt-2 left-0 bg-white border border-gray-300 shadow-md rounded-md w-40">
                 <div class="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer rounded-md"
                     id="language-option">
                     <img src="images/en-icon.png" alt="English" class="w-6">
@@ -49,151 +47,314 @@
                 </div>
             </div>
 
-            <button class="flex flex-col items-center gap-1 w-10 block md:hidden 
-            hover-custom-filter-shadow transition duration-500" onclick="openMenu()">
+            <button
+                class="flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
+                onclick="openMenu()">
                 <img src="./images/menu.png" alt="Menu" class="w-6">
             </button>
 
         </div>
 
         <!-- MOBILE MENU -->
-
-        <ul id="side-menu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen
-        bg-primeGreen transition duration-500 text-transform: uppercase">
-
+        <ul id="side-menu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-primeGreen transition duration-500 text-transform: uppercase">
             <div class="absolute right-6 top-6" onclick="closeMenu()">
                 <img src="./images/close.png" alt="" class="w-5 cursor-pointer">
             </div>
-
             <li><a href="#top" class="hover:text-primeYellow transition duration-500">Naslovna</a></li>
             <li><a href="#about" class="hover:text-primeYellow transition duration-500">O Nama</a></li>
             <li><a href="#services" class="hover:text-primeYellow transition duration-500">Usluge</a></li>
             <li><a href="#contact" class="hover:text-primeYellow transition duration-500">Kontakt</a></li>
             <li><a href="#location" class="hover:text-primeYellow transition duration-500">Lokacija</a></li>
             <li><a href="#partners" class="hover:text-primeYellow transition duration-500">Saradnici</a></li>
-
         </ul>
-
 
     </nav>
 
+
     <!-- HEADER -->
 
-    <header
-        class="w-11/12 mx-auto text-center h-screen grid-cols-1 md:flex items-center justify-center py-10 md:py-0 gap-4">
+    <div
+        class="w-full text-center pb-[20%] md:pb-2 md:h-screen flex flex-col md:flex-row items-center justify-center gap-12 md:gap-10 pt-[30%] md:pt-0">
 
+        <div class="flex flex-col items-center md:w-4/12 mx-10 md:mt-[7%]">
+            <img src="./images/logo.png" alt="" class="hover-custom-filter-logo transition duration-500">
 
-        <div class="flex flex-col items-center justify-center md:mr-14 my-[100px] md:my-[200px] sm:w-3/12 w-full">
-            <img src="images/logo.png" alt="logo" class="w-full hover-custom-filter-logo transition duration-500">
-            <h1 class="text-[40px] sm:text-6xl lg:text-[50px] mt-6 mx-auto text-darkGray font-semibold">Rok Šped Plus
-                D.O.O.</h1>
-            <h3 class="text-xl md:text-2xl mt-10 mx-auto text-darkGray">Medjunarodna Špedicija i Transport</h3>
-            <p class="max-w-2xl mx-auto mt-3 text-darkGray">Smederevo, Mladenovac, Srbija</p>
+            <h1 class="font-bold text-3xl md:text-4xl my-8">Rok Šped Plus D.O.O</h1>
+            <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3 mt-1 font-semibold text-darkGray">Medjunarodna
+                Špedicija i Transport</h3>
+            <p class="max-w-2xl mx-auto text-medGray mb-5"> Smederevo, Mladenovac, Srbija</p>
         </div>
 
+        <div
+            class="relative flex flex-col md:mt-[7%] items-center gap-6 md:w-6/12 mx-10 md:mx-auto bg-white rounded-3xl hover:scale-105 transition duration-500">
+            <div class="relative flex flex-col items-center justify-center rounded-3xl bg-white text-slate-300 p-10 shadow-lg">
+                <h1 class="text-2xl md:text-3xl font-bold text-black pb-10">O nama</h1>
+                <p class="text-darkGray leading-relaxed text-justify pb-10">
+                    Rok Šped Plus D.O.O. pruža pravovremenu, sigurnu i pouzdanu uslugu klijentima, poslujući na visoko
+                    stručnom nivou, uz otvorenu i ljubaznu komunikaciju naših zaposlenih. Korišćenjem naših usluga
+                    dobijate
+                    sigurnost, pouzdanost i kvalitet usluge uz niske troškove realizacije.
+                    <br><br>
+                    Naši zaposleni imaju 15 godina iskustva u poslovima carinskog posredovanja i zastupanja!
+                </p>
 
-        <div class="h-screen bg-lightGray grid grid-cols-1 sm:grid-cols-1 items-center justify-center sm:w-9/12 w-full">
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-lightGray p-10 pt-28">
-
-                <!-- First Card -->
-                <div class="block rounded-3xl border border-white bg-white h-[350px]
-                shadow-lg hover-custom-box-shadow-yellow transition duration-500 hover:scale-105">
-                    <span class="inline-block rounded-lg pt-2">
-                        <div class="inline-flex align-middle justify-center items-center select-none text-black">
-                            <h1 class="font-bold text-[26px]">Smederevo (Sedište)</h1>
-                        </div>
-                    </span>
-                    <h2 class="font-semibold sm:text-lg text-darkGray pb-5 md:pb-5">
-                        Kolarski Put 330, Kancelarija 36, <br>
-                        11300 Smederevo
-                    </h2>
-                    <p class="sm:mt-1 block text-lg sm:text-base text-black">
-                        Slađana Vasić <br> +381 64 32 040 11 <br>
-                        Vladimir Dakić <br> +381 64 65 953 69 <br></p>
-                    <p class="sm:mt-1 block text-md sm:text-base text-medGray pt-10 md:pt-12">office@roksped.rs <br>
-                        smederevo@roksped.rs</p>
-                </div>
-
-                <!-- Second Card -->
-                <div class="block rounded-3xl border border-white bg-white h-[350px]
-                shadow-lg hover-custom-box-shadow-green transition duration-500 hover:scale-105">
-                    <span class="inline-block rounded-lg pt-2">
-                        <div class="inline-flex align-middle justify-center items-center select-none text-black">
-                            <h1 class="font-bold text-[26px]">Slobodna Zona Smederevo</h1>
-                        </div>
-                    </span>
-                    <h2 class="font-semibold sm:text-lg text-darkGray pb-2 md:pb-2">
-                        Đure Salaja 17, <br>
-                        11300 Smederevo
-                    </h2>
-                    <p class="sm:mt-1  block text-md sm:text-base text-black">
-                        Goca Zdravković <br> +381 64 22 495 72 <br>
-                        Biljana Dakić <br> +381 64 11 824 416 <br>
-                        Milica Vujović <br> +381 66 80 372 42 <br></p>
-                    <p class="sm:mt-1 block text-md sm:text-base text-medGray pt-5 md:pt-8">slobodnazona@roksped.rs</p>
-                </div>
-
-                <!-- Third Card -->
-                <div class="block rounded-3xl border border-white bg-white h-[350px]
-                shadow-lg hover-custom-box-shadow-yellow transition duration-500 hover:scale-105">
-                    <span class="inline-block rounded-lg pt-2">
-                        <div class="inline-flex align-middle justify-center items-center select-none text-black">
-                            <h1 class="font-bold text-[26px]">Mladenovac</h1>
-                        </div>
-                    </span>
-                    <h2 class="font-semibold sm:text-lg text-darkGray pb-12 md:pb-14">
-                        Senaja, Senajska 2, <br>
-                        11235 Mali Požarevac
-                    </h2>
-                    <p class="sm:mt-1 block text-lg sm:text-base text-black">
-                        Mirjana Đurić <br> +381 64 82 549 82 <br></p>
-                    <p class="sm:mt-1 block text-md sm:text-base text-medGray pt-16 md:pt-16">mladenovac@roksped.rs</p>
-                </div>
-
-                <!-- Fourth Card -->
-                <div class="block rounded-3xl border border-white bg-white h-[350px]
-                shadow-lg hover-custom-box-shadow-green transition duration-500 hover:scale-105">
-                    <span class="inline-block rounded-lg pt-2">
-                        <div class="inline-flex align-middle justify-center items-center select-none text-black">
-                            <h1 class="font-bold text-[26px]">Smederevska Palanka</h1>
-                        </div>
-                    </span>
-                    <h2 class="font-semibold sm:text-lg text-darkGray pb-12 md:pb-14">
-                        Jozefa Šulca 22, <br>
-                        11420 Smederevska Palanka
-                    </h2>
-                    <p class="sm:mt-1 block text-lg sm:text-base text-black">
-                        Jelica Vuletić <br> +381 64 64 854 06 <br></p>
-                    <p class="sm:mt-1 block text-md sm:text-base text-medGray pt-16 md:pt-16">s.palanka@roksped.rs</p>
-                </div>
-
-                <!-- Fifth Card -->
-                <div class="block rounded-3xl border border-white bg-white h-[350px]
-                shadow-lg hover-custom-box-shadow-yellow transition duration-500 hover:scale-105">
-                    <span class="inline-block rounded-lg pt-2">
-                        <div class="inline-flex align-middle justify-center items-center select-none text-black">
-                            <h1 class="font-bold text-[26px]">Transport</h1>
-                        </div>
-                    </span>
-                    <h2 class="font-semibold sm:text-lg text-darkGray pb-12 md:pb-14">
-                        Kolarski Put 330, Kancelarija 36,
-                        11300 Smederevo
-                    </h2>
-                    <p class="sm:mt-1 block text-lg sm:text-base text-black">
-                        Bojan Bojanić <br> +381 64-1309794 <br></p>
-                    <p class="sm:mt-1 block text-md sm:text-base text-medGray pt-16 md:pt-16">transport@roksped.rs</p>
-                </div>
-
-                <a href="#contact" class="bg-primeGreen rounded-full w-40 h-20 
-                items-center justify-center flex font-bold text-white  border-darkGray border hover-custom-box-shadow-green shadow-lg
-                hover:bg-primeYellow transition duration-500 hover:text-black hover:scale-125 hover:border-medGray
-                relative md:top-1/3 md:left-1/3 -right-[23%] text-transform: uppercase">Usluge</a>
-
+                <a href="#about"
+                    class="mt-4 px-6 py-3 bg-primeGreen text-white font-semibold rounded-lg shadow-lg hover:bg-primeYellow hover:scale-105 transition duration-500">
+                    Saznaj više...
+                </a>
             </div>
         </div>
-    </header>
+
+    </div>
 
 
+    <!-- ABOUT -->
+
+    <div id="about" class="w-full h-screen scroll-mt-[100.5px] bg-lightGray relative flex flex-col">
+
+        <!-- Background Image -->
+        <div class="w-full h-80">
+            <img src="images/truck1.jpg" alt="Truck Image" class="w-full h-full object-cover">
+        </div>
+
+        <div
+            class="absolute top-[53%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl 
+            flex flex-col items-center bg-darkGray text-white px-10 pt-5 pb-3
+             rounded-2xl hover:scale-105 hover-custom-filter transition duration-500 bg-opacity-80 backdrop-blur-lg text-center space-y-14 min-h-[500px]">
+            <h1 class="text-4xl font-bold">O Nama</h1>
+            <p class="text-base md:text-lg leading-relaxed ">
+                Rok Šped Plus D.O.O. pruža usluge iz domena međunarodne špedicije i transporta na najvišem nivou
+                kvaliteta, po konkurentnim cenama. Nezavisno da li su vaše sirovine ili proizvodi u postupku uvoza,
+                izvoza ili nekom drugom carinskom postupku, mi obezbeđujemo efikasne usluge zastupanja pred carinskim
+                organima uz brzo i pouzdano sprovođenje svih carinskih formalnosti.
+            </p>
+            <p class="text-base md:text-lg leading-relaxed">
+                Primena i praćenje izmena carinskog i spoljno-trgovinskog zakonodavstva su naš svakodnevni posao. Među
+                našim klijentima su firme iz različitih sektora privrede, različitih veličina i profila.
+            </p>
+            <a href="#services" class="px-6 py-3 bg-primeGreen text-white font-semibold rounded-lg shadow-md 
+            hover:bg-primeYellow hover:text-darkGray hover:scale-105 transition duration-500">
+                Pogledajte Usluge
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- SERVICES -->
+
+    <div id="services" class="w-full h-screen scroll-mt-[100.5px]">
+        <div id="one" class="w-2/3 mx-auto text-center p-2 mt-10">
+            <h1 class="text-4xl font-bold">Usluge</h1>
+            <p class="text-md md:text-lg mt-2">Osnovna delatnost preduzeća je međunarodna špedicija – carinsko
+                posredovanje i
+                zastupanje, organizacija
+                transporta angažovanim prevoznim sredstvima, skladištenje carinske robe, spoljna trgovina-uvoz i izvoz i
+                sva stručna pomoć u vezi sa spoljnotrgovinskim poslovanjem.</p>
+        </div>
+
+        <div class="w-full h-screen mt-10">
+            <div class="max-w-3xl mx-auto">
+
+                <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg mx-2 md:mx-0"
+                    data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-96 md:h-[480px] shadow-lg hover:hover-custom-box-shadow-gradient" data-carousel-inner>
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="images/carinsko.jpg" class="object-cover w-full h-full" alt="Slide 1">
+                            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+                            <span
+                                class="absolute z-20 top-[5%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-white md:text-[30px]">Carinsko
+                                Posredovanje</span>
+                            <span
+                                class="absolute z-20 top-[20%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-[9.5px] text-white md:text-[14px]">Nudimo
+                                Vam brzu i sigurnu uslugu carinjenja, bez obzira o kom se carinskom postupku radi. Uvek
+                                dostupni
+                                carinski referenti će se pobrinuti da se postupak carinjenja obavi u što kraćem
+                                vremenskom roku i na
+                                obostrano zadovoljstvo</span>
+                            <span
+                                class="absolute z-20 top-[38%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-white md:text-[26px]">Za
+                                svoje klijente vrši kompletnu uslugu:</span>
+                            <span
+                                class="absolute z-20 top-[67%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-[9px] text-white md:text-[14px]">
+                                <ul class="list-disc">
+                                    <li>Prijavljivanje i smeštaj robe u carinskom skladištu</li>
+                                    <li>Izrada i podnošenje dokumentacije prilikom carinjenja (izrada uvoznih/izvoznih
+                                        dokumenata, privremeni uvoz/izvoz, aktivno oplemenjivanje, dorada, reeksport
+                                        robe)
+                                    <li>Prenaupućenje robe</li>
+                                    </li>
+                                    <li>Upotreba naše bankarske garancije u postupku carinjenja</li>
+                                    <li>Pribavljanje zahtevanih uverenja (sanitarnih, tržišnih, veterinarskih, fito,
+                                        atesta homologacija)</li>
+                                    <li>Zastupanje u upravnom postupku kod carinskih organa</li>
+
+                                </ul>
+                            </span>
+
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="images/logistika.jpg" class="object-cover w-full h-full" alt="Slide 1">
+                            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+                            <span
+                                class="absolute z-20 top-[5%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-white md:text-[30px]">Carinsko
+                                Posredovanje</span>
+                            <span
+                                class="absolute z-20 top-[20%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-[9.5px] text-white md:text-[14px]">Nudimo
+                                Vam brzu i sigurnu uslugu carinjenja, bez obzira o kom se carinskom postupku radi. Uvek
+                                dostupni
+                                carinski referenti će se pobrinuti da se postupak carinjenja obavi u što kraćem
+                                vremenskom roku i na
+                                obostrano zadovoljstvo</span>
+                            <span
+                                class="absolute z-20 top-[38%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-white md:text-[26px]">Za
+                                svoje klijente vrši kompletnu uslugu:</span>
+                            <span
+                                class="absolute z-20 top-[67%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-[9px] text-white md:text-[14px]">
+                                <ul class="list-disc">
+                                    <li>Prijavljivanje i smeštaj robe u carinskom skladištu</li>
+                                    <li>Izrada i podnošenje dokumentacije prilikom carinjenja (izrada uvoznih/izvoznih
+                                        dokumenata, privremeni uvoz/izvoz, aktivno oplemenjivanje, dorada, reeksport
+                                        robe)
+                                    <li>Prenaupućenje robe</li>
+                                    </li>
+                                    <li>Upotreba naše bankarske garancije u postupku carinjenja</li>
+                                    <li>Pribavljanje zahtevanih uverenja (sanitarnih, tržišnih, veterinarskih, fito,
+                                        atesta homologacija)</li>
+                                    <li>Zastupanje u upravnom postupku kod carinskih organa</li>
+
+                                </ul>
+                            </span>
+
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="images/skladiste.png" class="object-cover w-full h-full" alt="Slide 1">
+                            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+                            <span
+                                class="absolute z-20 top-[5%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-white md:text-[30px]">Carinsko
+                                Posredovanje</span>
+                            <span
+                                class="absolute z-20 top-[20%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-[9.5px] text-white md:text-[14px]">Nudimo
+                                Vam brzu i sigurnu uslugu carinjenja, bez obzira o kom se carinskom postupku radi. Uvek
+                                dostupni
+                                carinski referenti će se pobrinuti da se postupak carinjenja obavi u što kraćem
+                                vremenskom roku i na
+                                obostrano zadovoljstvo</span>
+                            <span
+                                class="absolute z-20 top-[38%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-white md:text-[26px]">Za
+                                svoje klijente vrši kompletnu uslugu:</span>
+                            <span
+                                class="absolute z-20 top-[67%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-[9px] text-white md:text-[14px]">
+                                <ul class="list-disc">
+                                    <li>Prijavljivanje i smeštaj robe u carinskom skladištu</li>
+                                    <li>Izrada i podnošenje dokumentacije prilikom carinjenja (izrada uvoznih/izvoznih
+                                        dokumenata, privremeni uvoz/izvoz, aktivno oplemenjivanje, dorada, reeksport
+                                        robe)
+                                    <li>Prenaupućenje robe</li>
+                                    </li>
+                                    <li>Upotreba naše bankarske garancije u postupku carinjenja</li>
+                                    <li>Pribavljanje zahtevanih uverenja (sanitarnih, tržišnih, veterinarskih, fito,
+                                        atesta homologacija)</li>
+                                    <li>Zastupanje u upravnom postupku kod carinskih organa</li>
+
+                                </ul>
+                            </span>
+
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="images/transport1.jpg" class="object-cover w-full h-full" alt="Slide 1">
+                            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+                            <span
+                                class="absolute z-20 top-[5%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-white md:text-[30px]">Carinsko
+                                Posredovanje</span>
+                            <span
+                                class="absolute z-20 top-[20%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-[9.5px] text-white md:text-[14px]">Nudimo
+                                Vam brzu i sigurnu uslugu carinjenja, bez obzira o kom se carinskom postupku radi. Uvek
+                                dostupni
+                                carinski referenti će se pobrinuti da se postupak carinjenja obavi u što kraćem
+                                vremenskom roku i na
+                                obostrano zadovoljstvo</span>
+                            <span
+                                class="absolute z-20 top-[38%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-white md:text-[26px]">Za
+                                svoje klijente vrši kompletnu uslugu:</span>
+                            <span
+                                class="absolute z-20 top-[67%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-[9px] text-white md:text-[14px]">
+                                <ul class="list-disc">
+                                    <li>Prijavljivanje i smeštaj robe u carinskom skladištu</li>
+                                    <li>Izrada i podnošenje dokumentacije prilikom carinjenja (izrada uvoznih/izvoznih
+                                        dokumenata, privremeni uvoz/izvoz, aktivno oplemenjivanje, dorada, reeksport
+                                        robe)
+                                    <li>Prenaupućenje robe</li>
+                                    </li>
+                                    <li>Upotreba naše bankarske garancije u postupku carinjenja</li>
+                                    <li>Pribavljanje zahtevanih uverenja (sanitarnih, tržišnih, veterinarskih, fito,
+                                        atesta homologacija)</li>
+                                    <li>Zastupanje u upravnom postupku kod carinskih organa</li>
+
+                                </ul>
+                            </span>
+
+                        </div>
+                    </div>
+                    <!-- Slider indicators -->
+                    <div class="flex absolute bottom-5 left-1/2 z-30 -translate-x-1/2 space-x-2"
+                        data-carousel-indicators>
+                        <button type="button"
+                            class="w-3 h-3 rounded-full bg-primeGreen/50 hover:bg-primeGreen focus:outline-none focus:bg-primeYellow transition"></button>
+                        <button type="button"
+                            class="w-3 h-3 rounded-full bg-primeGreen/50 hover:bg-primeGreen focus:outline-none focus:bg-primeYellow transition"></button>
+                        <button type="button"
+                            class="w-3 h-3 rounded-full bg-primeGreen/50 hover:bg-primeGreen focus:outline-none focus:bg-primeYellow transition"></button>
+                        <button type="button"
+                            class="w-3 h-3 rounded-full bg-primeGreen/50 hover:bg-primeGreen focus:outline-none focus:bg-primeYellow transition"></button>
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-primeGreen/50 rounded-full hover:bg-primeGreen focus:outline-none transition"
+                        data-carousel-prev>
+                        <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <button type="button"
+                        class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-primeGreen/50 rounded-full hover:bg-primeGreen focus:outline-none transition"
+                        data-carousel-next>
+                        <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTACT -->
+
+    <!-- LOCATION -->
+
+    <!-- PARTNERS -->
+
+
+
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
     <script src="./script.js"></script>
 </body>
 
