@@ -33,4 +33,10 @@
     box-shadow: 6px 6px 8px #6bae4565;
 }
 
+.hover-custom-filter{
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.5));
+}
 
+.hover-custom-box-shadow-gradient{
+    box-shadow: 6px 6px 8px rgba(0,0,0,0.3), 0 0 1px rgba(107,174,69,1), 0 0 1px rgb(159, 187, 1);
+}
