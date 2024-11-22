@@ -11,7 +11,8 @@
     <script src="./tailwind.config.js"></script>
 </head>
 
-<body class="bg-lightGray">
+<body class="relative bg-fixed bg-center bg-cover bg-no-repeat"
+    style="background-image:linear-gradient(rgba(218, 218, 218, 0.80), rgba(218, 218, 218, 0.80)), url(images/texture.jpg)">
 
     <!-- NAV -->
 
@@ -77,8 +78,8 @@
 
     <!-- HEADER -->
 
-    <div
-        class="w-full text-center pb-[20%] md:pb-2 md:h-screen flex flex-col md:flex-row items-center justify-center gap-12 md:gap-10 pt-[30%] md:pt-0">
+    <div class="w-full text-center pb-[20%] md:pb-2 md:h-screen flex flex-col 
+        md:flex-row items-center justify-center gap-12 md:gap-10 pt-[30%] md:pt-0 header">
 
         <div class="flex flex-col items-center md:w-4/12 mx-10 md:mt-[7%] md:mx-[5%]">
             <img src="./images/logo.png" alt="" class="hover-custom-filter-logo transition duration-500">
@@ -86,7 +87,7 @@
             <h1 class="font-bold text-4xl md:text-[48px] my-8">Rok Šped Plus D.O.O</h1>
             <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3 mt-1 font-semibold text-darkGray">Medjunarodna
                 Špedicija i Transport</h3>
-            <p class="max-w-2xl mx-auto text-medGray mb-5 text-xl"> Smederevo, Mladenovac, Srbija</p>
+            <p class="max-w-2xl mx-auto text-medGray font-semibold mb-5 text-xl"> Smederevo-Mladenovac, Srbija</p>
         </div>
 
         <div
@@ -115,7 +116,7 @@
 
     <!-- ABOUT -->
 
-    <div id="about" class="w-full h-screen scroll-mt-[100.5px] bg-lightGray relative flex flex-col">
+    <div id="about" class="w-full h-screen scroll-mt-[100.5px] relative flex flex-col">
 
         <!-- Background Image -->
         <div class="w-full h-80">
@@ -151,7 +152,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 md:mx-10">
 
             <!-- Usluge slider -->
-            <div class="w-full mb-5 md:h-screen md:mt-24">
+            <div class="w-full mb-5  md:mt-24">
                 <div class="max-w-3xl mx-auto">
 
                     <div class="relative rounded-3xl overflow-hidden shadow-lg mx-2 md:mx-0" data-carousel="static">
@@ -346,20 +347,21 @@
                         <li>Pakovanje i stručni saveti u vezi pakovanja</li>
                         <li>Inspekcijski pregledi i carinsko posredovanje</li>
                     </ul>
-                    <p class="text-md md:text-2xl mt-3">Na ovaj način Vaše pošiljke se, uz minimum Vašeg angažovanja, i bukvalno kreću "od vrata do
+                    <p class="text-md md:text-2xl mt-3">Na ovaj način Vaše pošiljke se, uz minimum Vašeg angažovanja, i
+                        bukvalno kreću "od vrata do
                         vrata"</p>
                     <p class="text-md md:text-2xl">Veliki broj svih naših različitih usluga
                         transporta i distribucije. Prepoznajte vaše rešenje!</p>
                 </div>
 
-                <a href="#contact" class="hidden mb:block px-6 py-3 mb-[200px] mt-10 md:mb-10 bg-primeGreen text-white font-semibold rounded-lg shadow-md 
+                <a href="#contact" class="hidden sm:block px-6 py-3 md:mb-10 bg-primeGreen text-white font-semibold rounded-lg shadow-md 
             hover:bg-primeYellow hover:text-darkGray hover:scale-105 transition duration-500">
                     Kontakt
                 </a>
             </div>
 
             <!-- Transport slider -->
-            <div id="transport-slider" class="w-full mb-5 md:h-screen md:mt-24">
+            <div id="transport-slider" class="w-full md:mb-24 md:mt-24">
                 <div class="max-w-3xl mx-auto">
 
                     <div class="relative rounded-3xl overflow-hidden shadow-lg mx-2 md:mx-0" data-carousel="static">
@@ -375,13 +377,13 @@
                                     text-2xl w-full font-bold text-primeGreen md:text-[30px] text-center hover-custom-filter">DRUMSKI
                                     TRANSPORT</span>
                                 <span
-                                    class="absolute z-20 w-4/5 top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                    class="absolute z-20 w-4/5 top-[42%] left-[55%] md:top-[40%] md:left-[50%] transform -translate-x-1/2 -translate-y-1/2 
                                     text-[13px] text-white md:text-[18px] font-semibold text-left hover-custom-filter">Drumski
                                     transport robe organizujemo na celoj teritoriji Evrope i šire, dok za dalje
                                     destinacije preporučujemo kombinovani transport robe, bilo da se radi o vodenom,
                                     železničkom ili avio transportu robe. Drumski transport robe ujedno spada u najčešće
                                     usluge transporta koje pružamo našim klijentima.</span>
-                                <span class="absolute z-20 top-[73%] md:top-[70%] left-[37%] transform -translate-x-1/2 -translate-y-1/2 
+                                <span class="absolute z-20 top-[73%] left-[42%] md:top-[70%] md:left-[37%] transform -translate-x-1/2 -translate-y-1/2 
                                     text-[14px] text-white md:text-[22px] font-semibold hover-custom-filter">
                                     <ul class="list-disc list-inside marker:text-primeGreen">
                                         <li>Puni ili delimični kamionski utovari</li>
@@ -395,12 +397,12 @@
                                 <img src="images/transport2.jpg" class="object-cover w-full h-full" alt="Slide 1">
                                 <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
                                 <span
-                                    class="absolute z-20 top-[8%] md:top-[15%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                    class="absolute z-20 top-[15%] md:top-[15%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
                                 text-2xl w-full font-bold text-primeGreen md:text-[30px] text-center hover-custom-filter">VODENI
                                     TRANSPORT</span>
                                 <span
-                                    class="absolute z-20 top-[28%] md:top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
-                                    text-[12px] text-white md:text-[16px] text-left font-semibold w-4/5 hover-custom-filter">Efikasan
+                                    class="absolute z-20 top-[40%] left-[52%] md:top-[40%] md:left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                    text-[10px] text-white md:text-[16px] text-left font-semibold w-2/3 md:w-4/5 hover-custom-filter">Efikasan
                                     transport robe vodenim saobraćajem iziskuje uključenje i drugih vidova saobraćaja.
                                     Pored pouzdane, efikasne i kvalitetne usluge transporta robe vodenim saobraćajem,
                                     ujedno Vam nudimo i pronalaženje adekvatne rute kako bi se određena količina robe
@@ -409,8 +411,8 @@
                                     Nudimo najpovoljnije transportno rešenje za prekomorski i rečni transport većih
                                     pošiljki kako generalnih, rasutih, tako i tečnih tereta do i iz svih pomorskih i
                                     rečnih luka prema najpovoljnijim tržišnim uslovima uz:</span>
-                                <span class="absolute z-20 top-[73%] md:top-[72%] left-[40%] transform -translate-x-1/2 -translate-y-1/2 
-                                text-[14px] text-white md:text-[18px] font-semibold hover-custom-filter">
+                                <span class="absolute w-2/3 z-20 top-[70%] left-[52%] md:top-[72%] md:left-[40%] transform -translate-x-1/2 -translate-y-1/2 
+                                text-[12px] text-white md:text-[18px] font-semibold hover-custom-filter">
                                     <ul class="list-disc list-inside marker:text-primeGreen">
                                         <li>Obezbeđenje adekvatnog tovarnog prostora na tržištu</li>
                                         <li>Koordinaciju i sinhronizaciju rada svih učesnika u prevozu</li>
@@ -428,8 +430,8 @@
                                 text-2xl w-full font-bold text-primeGreen md:text-[30px] text-center shadow hover-custom-filter">AVIO
                                     TRANSPORT</span>
                                 <span
-                                    class="absolute z-20 md:top-[55%] top-[55%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
-                                    text-[14px] text-white md:text-[18px] text-center font-semibold md:w-2/3 hover-custom-filter">Sve
+                                    class="absolute z-20 md:top-[55%] top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                    text-[10px] text-white md:text-[18px] text-center font-semibold w-2/3 hover-custom-filter">Sve
                                     je veći broj zahteva naših klijenata za transportom robe avio saobraćajem, imajući u
                                     vidu njegovu ekonomičnost i brzinu. U zavisnosti od destinacije i same količine robe
                                     koju trasnportujete, nudimo vam kvalitetnu uslugu odabira najpovoljnijeg avio
@@ -449,7 +451,7 @@
                                 text-2xl w-full font-bold text-primeGreen md:text-[30px] text-center hover-custom-filter">ŽELEZNIČKI
                                     TRANSPORT</span>
                                 <span
-                                    class="absolute w-2/3 z-20 md:top-[55%] top-[45%] left-[50%] transform -translate-x-1/2 
+                                    class="absolute w-2/3 z-20 md:top-[55%] top-[50%] left-[50%] transform -translate-x-1/2 
                                     -translate-y-1/2 text-[11px] text-white md:text-[18px] text-center font-semibold hover-custom-filter">
                                     Nekada, organizacija transporta robe podrazumeva uključenje i drugih vidova
                                     saobraćaja a sve u cilju brzog i efikasnog transporta robe. Nudimo vam pouzdanu,
@@ -500,7 +502,78 @@
         </div>
 
     </div>
+
     <!-- CONTACT -->
+    <div id="contact"
+        class="max-w-6xl max-lg:max-w-3xl mx-2 md:mx-auto bg-darkGray rounded-3xl mb-16 mt-10 hover-custom-filter scroll-mt-28">
+        <div class="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4 font-[sans-serif]">
+
+            <div class="bg-lightGray p-6 rounded-2xl border border-contactGreen shadow-lg">
+                <p class="text-sm font-semibold text-gray-800">Kontaktirajte nas</p>
+
+                <form class="mt-8 space-y-4">
+                    <input type="text" placeholder="Ime i prezime"
+                        class="w-full rounded-lg py-3 px-4 text-gray-800 border border-contactGreen text-sm outline-contactGreen" />
+                    <input type="email" placeholder="Email"
+                        class="w-full rounded-lg py-3 px-4 text-gray-800 border border-contactGreen text-sm outline-contactGreen" />
+                    <input type="text" placeholder="Naslov"
+                        class="w-full rounded-lg py-3 px-4 text-gray-800 border border-contactGreen text-sm outline-contactGreen" />
+                    <textarea placeholder="Poruka" rows="6"
+                        class="w-full rounded-lg px-4 text-gray-800 border border-contactGreen text-sm pt-3 outline-contactGreen"></textarea>
+                    <button type="button" class="text-white bg-primeGreen hover:bg-primeYellow tracking-wide rounded-lg 
+                        text-sm px-4 py-3 flex items-center justify-center w-full !mt-6">
+                        Pošalji poruku
+                    </button>
+                </form>
+            </div>
+
+            <div class="h-full">
+
+                <h1 class="text-4xl font-bold text-white">Podaci za Identifikaciju</h1>
+
+                <div class="grid grid-cols-3 gap-2 mt-5">
+                    <p class="text-lg font-bold text-white">Naziv firme:</p>
+                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">ROK ŠPED PLUS DOO SMEDEREVO</p>
+
+                    <p class="text-lg font-bold text-white">Šifra Delatnosti:</p>
+                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">5229</p>
+
+                    <p class="text-lg font-bold text-white">PIB:</p>
+                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">111326846</p>
+
+                    <p class="text-lg font-bold text-white">Matični broj:</p>
+                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">21462888</p>
+
+                    <p class="text-lg font-bold text-white">Sedište:</p>
+                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">Kolarski Put 330, sprat 3,
+                        Smederevo 11300,
+                        Srbija
+                    </p>
+
+                    <p class="text-lg font-bold text-white">Pravna forma:</p>
+                    <p class="text-sm text-gray-300 mb-2 leading-relaxed col-span-2 pt-1">Društvo sa ograničenom
+                        odgovornošću (D.O.O.)
+                    </p>
+                </div>
+
+                <h2 class="text-4xl font-bold text-white mt-8">Tekući račun</h2>
+
+                <div class="grid grid-cols-3 gap-2 mt-5">
+                    <p class="text-lg font-bold text-white">Banka:</p>
+                    <p class="text-sm text-gray-300 mb-2 leading-relaxed col-span-2">Raiffeisen Bank</p>
+
+                    <p class="text-lg font-bold text-white">Broj računa:</p>
+                    <p class="text-sm text-gray-300 mb-2 leading-relaxed col-span-2 pt-1">265-6410310004731-46</p>
+
+                    <a href="#location" class="px-4 py-3 col-end-4 text-center bg-primeGreen text-white font-semibold rounded-lg shadow-md 
+            hover:bg-primeYellow hover:text-darkGray hover:scale-105 transition duration-500">
+                    Lokacije
+                </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- LOCATION -->
 
