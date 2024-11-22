@@ -13,7 +13,9 @@ tailwind.config = {
                 primeYellow: '#FFC107',
                 darkGray: '#343A40',
                 lightGray: '#f5f5f5',
-                medGray: '#9E9E9E'
+                medGray: '#9E9E9E',
+                contactGreen: '#276a00a4',
+                contactYellow: '#ffc1074a'
             },
             gridTemplateColumns: {
                 'proj': '500px minmax(900px, 1fr) 100px'

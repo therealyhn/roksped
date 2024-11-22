@@ -15,7 +15,6 @@
 }
 
 
-
 /* Custom filter drop shadow for hover */
 .hover-custom-filter-shadow:hover {
     filter: drop-shadow(0 0 8px rgba(107, 174, 69, 1));
@@ -30,7 +29,7 @@
 }
 
 .hover-custom-box-shadow-green:hover{
-    box-shadow: 6px 6px 8px #6bae4565;
+    box-shadow: 6px 6px 8px #276a00a1;
 }
 
 .hover-custom-filter{
