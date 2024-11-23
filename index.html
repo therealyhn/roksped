@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body class="relative bg-fixed bg-center bg-cover bg-no-repeat"
@@ -84,14 +86,14 @@
         <div class="flex flex-col items-center md:w-4/12 mx-10 md:mt-[7%] md:mx-[5%]">
             <img src="./images/logo.png" alt="" class="hover-custom-filter-logo transition duration-500">
 
-            <h1 class="font-bold text-4xl md:text-[48px] my-8">Rok Šped Plus D.O.O</h1>
+            <h1 class="font-bold text-4xl md:text-[48px] my-8">Rok Šped Plus D.O.O.</h1>
             <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3 mt-1 font-semibold text-darkGray">Medjunarodna
                 Špedicija i Transport</h3>
-            <p class="max-w-2xl mx-auto text-medGray font-semibold mb-5 text-xl"> Smederevo-Mladenovac, Srbija</p>
+            <p class="max-w-2xl mx-auto text-darkGray font-semibold mb-5 text-xl"> Smederevo-Mladenovac, Srbija</p>
         </div>
 
-        <div
-            class="relative flex flex-col md:mt-[7%] items-center gap-6 md:w-6/12 mx-10 md:mx-auto bg-white rounded-3xl hover:scale-105 transition duration-500">
+        <div class="relative flex flex-col md:mt-[7%] items-center gap-6 md:w-6/12 mx-10 md:mx-auto 
+            bg-white rounded-xl hover:scale-105 transition duration-500">
             <div
                 class="relative flex flex-col items-center justify-center rounded-3xl bg-white text-slate-300 p-10 shadow-lg">
                 <h1 class="text-2xl md:text-3xl font-bold text-black pb-10">O nama</h1>
@@ -126,7 +128,7 @@
         <div
             class="absolute top-[52%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl 
             flex flex-col items-center bg-darkGray text-white px-2 md:px-10 pt-5 pb-3
-             rounded-2xl hover:scale-105 hover-custom-filter transition duration-500 bg-opacity-80 backdrop-blur-lg text-center space-y-14 min-h-[500px]">
+             rounded-xl hover:scale-105 hover-custom-filter transition duration-500 bg-opacity-80 backdrop-blur-lg text-center space-y-14 min-h-[500px]">
             <h1 class="text-4xl pt-5 md:pt-2 font-bold">O Nama</h1>
             <p class="text-base md:text-lg leading-relaxed ">
                 Rok Šped Plus D.O.O. pruža usluge iz domena međunarodne špedicije i transporta na najvišem nivou
@@ -155,7 +157,7 @@
             <div class="w-full mb-5  md:mt-24">
                 <div class="max-w-3xl mx-auto">
 
-                    <div class="relative rounded-3xl overflow-hidden shadow-lg mx-2 md:mx-0" data-carousel="static">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg mx-2 md:mx-0" data-carousel="static">
                         <!-- Carousel wrapper -->
                         <div class="relative h-96 md:h-[480px] shadow-lg hover:hover-custom-box-shadow-gradient"
                             data-carousel-inner>
@@ -364,7 +366,7 @@
             <div id="transport-slider" class="w-full md:mb-24 md:mt-24">
                 <div class="max-w-3xl mx-auto">
 
-                    <div class="relative rounded-3xl overflow-hidden shadow-lg mx-2 md:mx-0" data-carousel="static">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg mx-2 md:mx-0" data-carousel="static">
                         <!-- Carousel wrapper -->
                         <div class="relative h-96 md:h-[480px] shadow-lg hover:hover-custom-box-shadow-gradient"
                             data-carousel-inner>
@@ -505,22 +507,25 @@
 
     <!-- CONTACT -->
     <div id="contact"
-        class="max-w-6xl max-lg:max-w-3xl mx-2 md:mx-auto bg-darkGray rounded-3xl mb-16 mt-10 hover-custom-filter scroll-mt-28">
+        class="max-w-6xl max-lg:max-w-3xl mx-2 md:mx-auto bg-darkGray rounded-xl mb-16 mt-10 hover-custom-filter scroll-mt-36">
         <div class="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4 font-[sans-serif]">
 
             <div class="bg-lightGray p-6 rounded-2xl border border-contactGreen shadow-lg">
                 <p class="text-sm font-semibold text-gray-800">Kontaktirajte nas</p>
 
-                <form class="mt-8 space-y-4">
+                <form method="POST" action="https://api.web3forms.com/submit" class="mt-8 space-y-4">
+
+                    <input type="hidden" name="access_key" value="a5e9b0d1-c7dc-4411-aa72-8730e86969e9">
+
                     <input type="text" placeholder="Ime i prezime"
                         class="w-full rounded-lg py-3 px-4 text-gray-800 border border-contactGreen text-sm outline-contactGreen" />
                     <input type="email" placeholder="Email"
                         class="w-full rounded-lg py-3 px-4 text-gray-800 border border-contactGreen text-sm outline-contactGreen" />
                     <input type="text" placeholder="Naslov"
                         class="w-full rounded-lg py-3 px-4 text-gray-800 border border-contactGreen text-sm outline-contactGreen" />
-                    <textarea placeholder="Poruka" rows="6"
+                    <textarea placeholder="Poruka" rows="6" name="message"
                         class="w-full rounded-lg px-4 text-gray-800 border border-contactGreen text-sm pt-3 outline-contactGreen"></textarea>
-                    <button type="button" class="text-white bg-primeGreen hover:bg-primeYellow tracking-wide rounded-lg 
+                    <button class="text-white bg-primeGreen hover:bg-primeYellow tracking-wide rounded-lg 
                         text-sm px-4 py-3 flex items-center justify-center w-full !mt-6">
                         Pošalji poruku
                     </button>
@@ -529,7 +534,7 @@
 
             <div class="h-full">
 
-                <h1 class="text-4xl font-bold text-white">Podaci za Identifikaciju</h1>
+                <h1 class="text-4xl font-bold text-white text-decoration: uppercase">Podaci za Identifikaciju</h1>
 
                 <div class="grid grid-cols-3 gap-2 mt-5">
                     <p class="text-lg font-bold text-white">Naziv firme:</p>
@@ -556,19 +561,19 @@
                     </p>
                 </div>
 
-                <h2 class="text-4xl font-bold text-white mt-8">Tekući račun</h2>
+                <h2 class="text-4xl font-bold text-white mt-8 text-decoration: uppercase">Tekući račun</h2>
 
                 <div class="grid grid-cols-3 gap-2 mt-5">
                     <p class="text-lg font-bold text-white">Banka:</p>
-                    <p class="text-sm text-gray-300 mb-2 leading-relaxed col-span-2">Raiffeisen Bank</p>
+                    <p class="text-sm text-gray-300 mb-2 leading-relaxed col-span-2 pt-1">Raiffeisen Bank</p>
 
                     <p class="text-lg font-bold text-white">Broj računa:</p>
                     <p class="text-sm text-gray-300 mb-2 leading-relaxed col-span-2 pt-1">265-6410310004731-46</p>
 
                     <a href="#location" class="px-4 py-3 col-end-4 text-center bg-primeGreen text-white font-semibold rounded-lg shadow-md 
             hover:bg-primeYellow hover:text-darkGray hover:scale-105 transition duration-500">
-                    Lokacije
-                </a>
+                        Lokacije
+                    </a>
                 </div>
 
             </div>
@@ -577,8 +582,101 @@
 
     <!-- LOCATION -->
 
+    <div id="location" class="w-full h-screen scroll-mt-[105px] mt-[200px]">
+
+        <div class="flex flex-col gap-5">
+            <!-- First 3 cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <!-- Card 1 -->
+                <div class="bg-white shadow-lg rounded-xl p-5 m-4
+                hover:scale-105 transition duration-500">
+                    <div class="flex flex-col gap-2 text-center">
+                        <h1 class="text-primeGreen font-bold text-3xl">Smederevo</h1>
+                        <p class="text-black">Kolarski Put 330, sprat 3 <br>Smederevo 11300, Srbija</p>
+                        <p class="text-black font-semibold text-lg">Vasić Slađana <br> +381 64 32 040 11</p>
+                        <p class="text-black font-semibold text-lg">Dakić Vladimir <br> +381 64 65 953 69</p>
+                        <p class="text-darkGray text-lg">office@roksped.rs <br> smederevo@roksped.rs</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white shadow-lg rounded-xl p-5 m-4
+                hover:scale-105 transition duration-500">
+                    <div class="flex flex-col gap-2 text-center">
+                        <h1 class="text-primeGreen font-bold text-3xl">Slobodna Zona Smederevo</h1>
+                        <p class="text-black">Đure Salaja 17
+                            11300 Smederevo</p>
+                        <p class="text-black font-semibold text-lg">Zdravkocić Goca <br> +381 64 22 495 72</p>
+                        <p class="text-black font-semibold text-lg">Dakić Biljana <br> +381 64 11 824 41</p>
+                        <p class="text-black font-semibold text-lg">Vujović Milica <br> +381 66 80 372 42</p>
+                        <p class="text-darkGray text-lg">slobodnazona@roksped.rs</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white shadow-lg rounded-xl p-5 m-4
+                hover:scale-105 transition duration-500">
+                    <div class="flex flex-col gap-2 text-center">
+                        <h1 class="text-primeGreen font-bold text-3xl">Mladenovac</h1>
+                        <p class="text-black">Senaja, Senajska 2
+                            <br> 11235 Mali Požarevac
+                        </p>
+                        <p class="text-black font-semibold text-lg pt-10">Đurić Mirjana <br> +381 64 82 549 82</p>
+                        <p class="text-darkGray text-lg pt-10">mladenovac@roksped.rs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4th and 5th card -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                <!-- Card 4 -->
+                <div class="bg-white shadow-lg rounded-xl p-5 m-4
+                hover:scale-105 transition duration-500">
+                    <div class="flex flex-col gap-2 text-center">
+                        <h1 class="text-primeGreen font-bold text-3xl">Smederevska Palanka</h1>
+                        <p class="text-black">Jozefa Šulca 22 <br>
+                            11420 Smederevska Palanka (Carinski terminal)</p>
+                        <p class="text-black font-semibold text-lg pt-2">Vuletić Jelica <br> +381 64 64 854 06</p>
+                        <p class="text-darkGray text-lg pt-4">s.palanka@roksped.rs</p>
+                    </div>
+                </div>
+
+                <!-- Map Button -->
+                <div class="justify-self-center self-center">
+                    <a href="#map" class="px-12 py-8 text-lg col-end-4 text-center bg-primeGreen 
+                    text-white font-semibold rounded-lg shadow-lg
+                hover:bg-primeYellow hover:text-darkGray hover:scale-105 transition duration-500">
+                        Google Mapa
+                    </a>
+                </div>
+
+
+                <!-- Card 5 -->
+                <div class="bg-white shadow-lg rounded-xl p-5 m-4
+                hover:scale-105 transition duration-500">
+                    <div class="flex flex-col gap-2 text-center">
+                        <h1 class="text-primeGreen font-bold text-3xl">Transport</h1>
+                        <p class="text-black">Kolarski Put 330, sprat 3 <br> Smederevo 11300, Srbija</p>
+                        <p class="text-black font-semibold text-lg pt-2">Bojanić Bojan <br> +381 64 13 09 794</p>
+                        <p class="text-darkGray text-lg pt-4">transport@roksped.rs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="map" class="flex justify-center items-center w-full h-screen my-10 scroll-mt-10">
+                <div id="googlemap" class="w-4/5 h-[600px] overflow-hidden mx-auto shadow-lg border-2 border-primeGreen rounded-xl"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
     <!-- PARTNERS -->
 
+    <!-- FOOTER -->
+
+    <!-- Website redesign by Jovan Ljusic, 2024. Contact: contact@jovanljusic.com -->
 
 
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
