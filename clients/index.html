@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rok Šped Plus D.O.O - Saradnici</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body class="relative bg-fixed bg-center bg-cover bg-no-repeat"
+    style="background-image:linear-gradient(rgba(218, 218, 218, 0.80), rgba(218, 218, 218, 0.80)), url(../images/texture.jpg)">
+
+    <!-- NAV -->
+
+    <nav id="nav"
+        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-darkGray backdrop-blur-md hover-custom-filter">
+
+        <img src="../images/logonav.png" alt="logo"
+            class="w-28 cursor-pointer hover-custom-filter-logo transition duration-500">
+
+        <ul id="menu-1"
+            class="hidden md:flex items-center gap-10 lg:gap-12 text-white font-semibold text-transform: uppercase">
+            <li><a href="../index.html" class="hover:text-primeGreen transition duration-500">Naslovna</a></li>
+            <li><a href="../services" class="hover:text-primeGreen transition duration-500">Usluge</a></li>
+            <li><a href="../contact" class="hover:text-primeGreen transition duration-500">Kontakt</a></li>
+            <li><a href="../locations" class="hover:text-primeGreen transition duration-500">Lokacija</a></li>
+        </ul>
+
+        <div class="relative text-white flex items-center gap-5">
+            <button
+                class="flex items-center gap-1 w-20 justify-between hover-custom-filter-shadow transition duration-500"
+                id="language-button">
+                <img src="../images/globe-icon.png" alt="language-change" class="w-8">
+                <span class="text-sm md:text-base font-medium">Srpski</span>
+            </button>
+
+            <div id="language-popup"
+                class="hidden absolute text-black mt-2 left-0 bg-white border border-gray-300 shadow-md rounded-md w-40">
+                <div class="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer rounded-md"
+                    id="language-option">
+                    <img src="../images/en-icon.png" alt="English" class="w-6">
+                    English
+                </div>
+            </div>
+
+            <button
+                class="flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
+                onclick="openMenu()">
+                <img src="../images/menu.png" alt="Menu" class="w-6">
+            </button>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+        <ul id="side-menu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-primeGreen transition duration-500 text-transform: uppercase">
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="../images/close.png" alt="" class="w-5 cursor-pointer">
+            </div>
+            <li><a href="index.html" class="hover:text-primeYellow transition duration-500">Naslovna</a></li>
+            <li><a href="../services" class="hover:text-primeYellow transition duration-500">Usluge</a></li>
+            <li><a href="../contact" class="hover:text-primeYellow transition duration-500">Kontakt</a></li>
+            <li><a href="../location" class="hover:text-primeYellow transition duration-500">Lokacija</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- CLIENTS -->
+
+    <div>
+        <img src="../images/truck1.jpg" alt="">
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="mt-10">
+        <div class="text-center">
+            <img src="../images/logonav.png" alt="" class="w-36 mx-auto">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <a href="mailto:office@roksped.rs" class="hover:underline">office@roksped.rs</a>
+            </div>
+        </div>
+
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-5 py-5">
+            <p>Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
+            <p>Designed by <a href="https://jovanljusic.com" target="_blank" class="hover:underline">Jovan Ljusic</a>
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Website redesign by Jovan Ljusic, 2024. Contact: contact@jovanljusic.com -->
+
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script src="../script/script.js"></script>
+</body>
+
+</html>

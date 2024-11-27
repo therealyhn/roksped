@@ -33,7 +33,7 @@
 }
 
 .hover-custom-filter{
-    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.5));
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.3));
 }
 
 .hover-custom-box-shadow-gradient{

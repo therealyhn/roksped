@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rok Šped Plus D.O.O - Transport</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body class="relative bg-fixed bg-center bg-cover bg-no-repeat"
+    style="background-image:linear-gradient(rgba(218, 218, 218, 0.80), rgba(218, 218, 218, 0.80)), url(../images/texture.jpg)">
+
+    <!-- NAV -->
+
+    <nav id="nav"
+        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-darkGray backdrop-blur-md hover-custom-filter">
+
+        <img src="../images/logonav.png" alt="logo"
+            class="w-28 cursor-pointer hover-custom-filter-logo transition duration-500">
+
+        <ul id="menu-1"
+            class="hidden md:flex items-center gap-10 lg:gap-12 text-white font-semibold text-transform: uppercase">
+            <li><a href="../index.html" class="hover:text-primeGreen transition duration-500">Naslovna</a></li>
+            <li><a href="../services" class="hover:text-primeGreen transition duration-500">Ostale Usluge</a></li>
+            <li><a href="../contact" class="hover:text-primeGreen transition duration-500">Kontakt</a></li>
+            <li><a href="../locations" class="hover:text-primeGreen transition duration-500">Lokacija</a></li>
+            <li><a href="../clients" class="hover:text-primeGreen transition duration-500">Saradnici</a></li>
+        </ul>
+
+        <div class="relative text-white flex items-center gap-5">
+            <button
+                class="flex items-center gap-1 w-20 justify-between hover-custom-filter-shadow transition duration-500"
+                id="language-button">
+                <img src="../images/globe-icon.png" alt="language-change" class="w-8">
+                <span class="text-sm md:text-base font-medium">Srpski</span>
+            </button>
+
+            <div id="language-popup"
+                class="hidden absolute text-black mt-2 left-0 bg-white border border-gray-300 shadow-md rounded-md w-40">
+                <div class="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer rounded-md"
+                    id="language-option">
+                    <img src="../images/en-icon.png" alt="English" class="w-6">
+                    English
+                </div>
+            </div>
+
+            <button
+                class="flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
+                onclick="openMenu()">
+                <img src="../images/menu.png" alt="Menu" class="w-6">
+            </button>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+        <ul id="side-menu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-primeGreen transition duration-500 text-transform: uppercase">
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="../images/close.png" alt="" class="w-5 cursor-pointer">
+            </div>
+            <li><a href="../index.html" class="hover:text-primeYellow transition duration-500">Naslovna</a></li>
+            <li><a href="../services" class="hover:text-primeYellow transition duration-500">Ostale Usluge</a></li>
+            <li><a href="../contact" class="hover:text-primeYellow transition duration-500">Kontakt</a></li>
+            <li><a href="../location" class="hover:text-primeYellow transition duration-500">Lokacija</a></li>
+            <li><a href="../clients" class="hover:text-primeYellow transition duration-500">Saradnici</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- TRANSPORT -->
+
+    <div id="transport" class="w-full scroll-mt-[90px]">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 md:mx-10">
+
+            <!-- Transport col -->
+            <div class="flex flex-col gap-12 items-center">
+                <div class="w-4/5 mx-auto text-left p-2 md:mt-24">
+                    <h1 class=" text-4xl md:text-5xl font-bold mb-2">Transport</h1>
+                    <h1 class=" text-xl md:text-3xl font-semibold mb-2">Profesionalna usluga organizacije transporta
+                        kompletirana je
+                        uslugama:</h1>
+                    <ul class="list-disc list-inside text-md md:text-lg marker:text-primeGreen mt-3">
+                        <li>Preuzimanje / dostava pošiljke</li>
+                        <li>Pakovanje i stručni saveti u vezi pakovanja</li>
+                        <li>Inspekcijski pregledi i carinsko posredovanje</li>
+                    </ul>
+                    <p class="text-md md:text-2xl mt-3">Na ovaj način Vaše pošiljke se, uz minimum Vašeg angažovanja, i
+                        bukvalno kreću "od vrata do
+                        vrata"</p>
+                    <p class="text-md md:text-2xl">Veliki broj svih naših različitih usluga
+                        transporta i distribucije. Prepoznajte vaše rešenje!</p>
+                </div>
+
+                <a href="../contact" class="hidden sm:block px-6 py-3 md:mb-10 bg-primeGreen text-white font-semibold rounded-lg shadow-md 
+                hover:bg-primeYellow hover:text-darkGray hover:scale-105 transition duration-500">
+                    Kontakt
+                </a>
+            </div>
+
+            <!-- Transport slider -->
+            <div id="transport-slider" class="w-full md:mb-24 md:mt-24">
+                <div class="max-w-3xl mx-auto">
+
+                    <div class="relative rounded-xl overflow-hidden shadow-lg mx-2 md:mx-0" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-96 md:h-[480px] shadow-lg hover:hover-custom-box-shadow-gradient"
+                            data-carousel-inner>
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="../images/transport1.jpg" class="object-cover w-full h-full" alt="Slide 1">
+                                <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+                                <span
+                                    class="absolute z-20 top-[15%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                        text-2xl w-full font-bold text-primeGreen md:text-[30px] text-center hover-custom-filter">DRUMSKI
+                                    TRANSPORT</span>
+                                <span
+                                    class="absolute z-20 w-4/5 top-[42%] left-[55%] md:top-[40%] md:left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                        text-[13px] text-white md:text-[18px] font-semibold text-left hover-custom-filter">Drumski
+                                    transport robe organizujemo na celoj teritoriji Evrope i šire, dok za dalje
+                                    destinacije preporučujemo kombinovani transport robe, bilo da se radi o vodenom,
+                                    železničkom ili avio transportu robe. Drumski transport robe ujedno spada u najčešće
+                                    usluge transporta koje pružamo našim klijentima.</span>
+                                <span class="absolute z-20 top-[73%] left-[42%] md:top-[70%] md:left-[37%] transform -translate-x-1/2 -translate-y-1/2 
+                                        text-[14px] text-white md:text-[22px] font-semibold hover-custom-filter">
+                                    <ul class="list-disc list-inside marker:text-primeGreen">
+                                        <li>Puni ili delimični kamionski utovari</li>
+                                        <li>Zbirne kamionske pošiljke</li>
+                                    </ul>
+                                </span>
+
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="../images/transport2.jpg" class="object-cover w-full h-full" alt="Slide 1">
+                                <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+                                <span
+                                    class="absolute z-20 top-[15%] md:top-[15%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                    text-2xl w-full font-bold text-primeGreen md:text-[30px] text-center hover-custom-filter">VODENI
+                                    TRANSPORT</span>
+                                <span
+                                    class="absolute z-20 top-[40%] left-[52%] md:top-[40%] md:left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                        text-[10px] text-white md:text-[16px] text-left font-semibold w-2/3 md:w-4/5 hover-custom-filter">Efikasan
+                                    transport robe vodenim saobraćajem iziskuje uključenje i drugih vidova saobraćaja.
+                                    Pored pouzdane, efikasne i kvalitetne usluge transporta robe vodenim saobraćajem,
+                                    ujedno Vam nudimo i pronalaženje adekvatne rute kako bi se određena količina robe
+                                    transportovala od mesta utovara do krajnje destinacije.
+
+                                    Nudimo najpovoljnije transportno rešenje za prekomorski i rečni transport većih
+                                    pošiljki kako generalnih, rasutih, tako i tečnih tereta do i iz svih pomorskih i
+                                    rečnih luka prema najpovoljnijim tržišnim uslovima uz:</span>
+                                <span class="absolute w-2/3 z-20 top-[70%] left-[52%] md:top-[72%] md:left-[40%] transform -translate-x-1/2 -translate-y-1/2 
+                                    text-[12px] text-white md:text-[18px] font-semibold hover-custom-filter">
+                                    <ul class="list-disc list-inside marker:text-primeGreen">
+                                        <li>Obezbeđenje adekvatnog tovarnog prostora na tržištu</li>
+                                        <li>Koordinaciju i sinhronizaciju rada svih učesnika u prevozu</li>
+                                    </ul>
+                                </span>
+
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="../images/avio.jpg" class="object-cover w-full h-full" alt="Slide 1">
+                                <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+                                <span
+                                    class="absolute z-20 top-[15%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                    text-2xl w-full font-bold text-primeGreen md:text-[30px] text-center shadow hover-custom-filter">AVIO
+                                    TRANSPORT</span>
+                                <span
+                                    class="absolute z-20 md:top-[55%] top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                        text-[10px] text-white md:text-[18px] text-center font-semibold w-2/3 hover-custom-filter">Sve
+                                    je veći broj zahteva naših klijenata za transportom robe avio saobraćajem, imajući u
+                                    vidu njegovu ekonomičnost i brzinu. U zavisnosti od destinacije i same količine robe
+                                    koju trasnportujete, nudimo vam kvalitetnu uslugu odabira najpovoljnijeg avio
+                                    prevoznika, kao I najbrže rute za transport robe. . Bez obzira na vašu lokaciju i
+                                    izbor aerodroma do kog je potrebno transportovati vašu robu, naša kompanija vam
+                                    stoji na usluzi 24h. Dostupni smo za vas svih sedam dana u nedelji i fleksibilni za
+                                    sve vrste dogovora. Cilj nam je da ispunimo sve vaše zahteve i sa ponosom vas dodamo
+                                    na listu naših zadovoljnih klijenata.</span>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="../images/zeleznicki.jpg" class="object-cover w-full h-full" alt="Slide 1">
+                                <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+                                <span
+                                    class="absolute z-20 md:top-[15%] md:left-[50%] top-[15%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 
+                                    text-2xl w-full font-bold text-primeGreen md:text-[30px] text-center hover-custom-filter">ŽELEZNIČKI
+                                    TRANSPORT</span>
+                                <span
+                                    class="absolute w-2/3 z-20 md:top-[55%] top-[50%] left-[50%] transform -translate-x-1/2 
+                                        -translate-y-1/2 text-[11px] text-white md:text-[18px] text-center font-semibold hover-custom-filter">
+                                    Nekada, organizacija transporta robe podrazumeva uključenje i drugih vidova
+                                    saobraćaja a sve u cilju brzog i efikasnog transporta robe. Nudimo vam pouzdanu,
+                                    efikasnu i kvalitetnu uslugu transporta robe železnicom i pronalaženje adekvatne
+                                    rute kako bise određena količina robe transportovala od mesta utovara do krajnje
+                                    destinacije. Železnički transport robe spada u red najekonomičnijih vidova
+                                    transporta. Ukoliko ste se odlučili da se vaša roba transportuje železnicom, naša
+                                    kompanija vam stoji na raspolaganju za svu logističku podršku.</span>
+                            </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="flex absolute bottom-5 left-1/2 z-30 -translate-x-1/2 space-x-2"
+                            data-carousel-indicators>
+                            <button type="button"
+                                class="w-3 h-3 rounded-full bg-primeGreen/80 hover:bg-primeYellow focus:outline focus:bg-primeGreen transition"></button>
+                            <button type="button"
+                                class="w-3 h-3 rounded-full bg-primeGreen/80 hover:bg-primeYellow focus:outline focus:bg-primeGreen transition"></button>
+                            <button type="button"
+                                class="w-3 h-3 rounded-full bg-primeGreen/80 hover:bg-primeYellow focus:outline focus:bg-primeGreen transition"></button>
+                            <button type="button"
+                                class="w-3 h-3 rounded-full bg-primeGreen/80 hover:bg-primeYellow focus:outline focus:bg-primeGreen transition"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button"
+                            class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-primeYellow/50 rounded-full hover:bg-primeYellow focus:outline-none transition"
+                            data-carousel-prev>
+                            <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7">
+                                </path>
+                            </svg>
+                        </button>
+                        <button type="button"
+                            class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-primeYellow/50 rounded-full hover:bg-primeYellow focus:outline-none transition"
+                            data-carousel-next>
+                            <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="mt-10">
+        <div class="text-center">
+            <img src="../images/logonav.png" alt="" class="w-36 mx-auto">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <a href="mailto:office@roksped.rs" class="hover:underline">office@roksped.rs</a>
+            </div>
+        </div>
+
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-5 py-5">
+            <p>Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
+            <p>Designed by <a href="https://jovanljusic.com" target="_blank" class="hover:underline">Jovan Ljusic</a>
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Website redesign by Jovan Ljusic, 2024. Contact: contact@jovanljusic.com -->
+
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script src="../script/script.js"></script>
+</body>
+
+</html>
