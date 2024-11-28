@@ -18,17 +18,17 @@
 
     <!-- NAV -->
 
-    <nav id="nav"
-        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-darkGray backdrop-blur-md hover-custom-filter">
+    <nav id="nav" class="w-full px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between
+     z-50 bg-opacity-80 bg-darkGray backdrop-blur-md">
 
-        <img src="../images/logonav.png" alt="logo"
+        <img src="../images/logo-nav.png" alt="logo"
             class="w-28 cursor-pointer hover-custom-filter-logo transition duration-500">
 
         <ul id="menu-1"
-            class="hidden md:flex items-center gap-10 lg:gap-12 text-white font-semibold text-transform: uppercase">
+            class="hidden md:flex items-center gap-10 lg:gap-12 text-white text-xl font-semibold text-transform: uppercase">
             <li><a href="../index.html" class="hover:text-primeGreen transition duration-500">Naslovna</a></li>
             <li><a href="../services" class="hover:text-primeGreen transition duration-500">Usluge</a></li>
-            <li><a href="../locations" class="hover:text-primeGreen transition duration-500">Lokacija</a></li>
+            <li><a href="../locations" class="hover:text-primeGreen transition duration-500">Lokacije</a></li>
             <li><a href="../clients" class="hover:text-primeGreen transition duration-500">Saradnici</a></li>
         </ul>
 
@@ -44,7 +44,7 @@
                 class="hidden absolute text-black mt-2 left-0 bg-white border border-gray-300 shadow-md rounded-md w-40">
                 <div class="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer rounded-md"
                     id="language-option">
-                    <img src="../images/en-icon.png" alt="English" class="w-6">
+                    <img src="../images/en-icon.png" alt="English" class="w-6 text-darkGray">
                     English
                 </div>
             </div>
@@ -65,104 +65,90 @@
             </div>
             <li><a href="../index.html" class="hover:text-primeYellow transition duration-500">Naslovna</a></li>
             <li><a href="../services" class="hover:text-primeYellow transition duration-500">Usluge</a></li>
-            <li><a href="../locations" class="hover:text-primeYellow transition duration-500">Lokacija</a></li>
+            <li><a href="../location" class="hover:text-primeYellow transition duration-500">Lokacije</a></li>
             <li><a href="../clients" class="hover:text-primeYellow transition duration-500">Saradnici</a></li>
         </ul>
 
     </nav>
 
     <!-- CONTACT -->
-    <div id="contact"
-        class="max-w-6xl max-lg:max-w-3xl mx-2 md:mx-auto bg-darkGray rounded-xl mb-16 mt-10 hover-custom-filter scroll-mt-36">
-        <div class="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4 font-[sans-serif]">
+    
+    <div class="w-11/12 max-w-6xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
-            <div class="bg-lightGray p-6 rounded-2xl border border-contactGreen shadow-lg">
-                <p class="text-sm font-semibold text-gray-800">Kontaktirajte nas</p>
-
-                <form method="POST" action="https://api.web3forms.com/submit" class="mt-8 space-y-4">
-
-                    <input type="hidden" name="access_key" value="a5e9b0d1-c7dc-4411-aa72-8730e86969e9">
-
-                    <input type="text" placeholder="Ime i prezime"
-                        class="w-full rounded-lg py-3 px-4 text-gray-800 border border-contactGreen text-sm outline-contactGreen" />
-                    <input type="email" placeholder="Email"
-                        class="w-full rounded-lg py-3 px-4 text-gray-800 border border-contactGreen text-sm outline-contactGreen" />
-                    <input type="text" placeholder="Naslov"
-                        class="w-full rounded-lg py-3 px-4 text-gray-800 border border-contactGreen text-sm outline-contactGreen" />
-                    <textarea placeholder="Poruka" rows="6" name="message"
-                        class="w-full rounded-lg px-4 text-gray-800 border border-contactGreen text-sm pt-3 outline-contactGreen"></textarea>
-                    <button class="text-white bg-primeGreen hover:bg-primeYellow tracking-wide rounded-lg 
-                        text-sm px-4 py-3 flex items-center justify-center w-full !mt-6">
-                        Pošalji poruku
-                    </button>
-                </form>
-            </div>
-
-            <div class="h-full">
-
-                <h1 class="text-4xl font-bold text-white text-decoration: uppercase">Podaci za Identifikaciju</h1>
-
-                <div class="grid grid-cols-3 gap-2 mt-5">
-                    <p class="text-lg font-bold text-white">Naziv firme:</p>
-                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">ROK ŠPED PLUS DOO SMEDEREVO</p>
-
-                    <p class="text-lg font-bold text-white">Šifra Delatnosti:</p>
-                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">5229</p>
-
-                    <p class="text-lg font-bold text-white">PIB:</p>
-                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">111326846</p>
-
-                    <p class="text-lg font-bold text-white">Matični broj:</p>
-                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">21462888</p>
-
-                    <p class="text-lg font-bold text-white">Sedište:</p>
-                    <p class="text-sm text-gray-300 leading-relaxed col-span-2 pt-1">Kolarski Put 330, sprat 3,
-                        Smederevo 11300,
-                        Srbija
-                    </p>
-
-                    <p class="text-lg font-bold text-white">Pravna forma:</p>
-                    <p class="text-sm text-gray-300 mb-2 leading-relaxed col-span-2 pt-1">Društvo sa ograničenom
-                        odgovornošću (D.O.O.)
-                    </p>
+        <!-- Contact Form Section -->
+        <div class="p-8 bg-white shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-darkGray mb-6 text-center uppercase">Kontaktirajte Nas</h2>
+            <form method="POST" action="https://api.web3forms.com/submit">
+    
+                <input type="hidden" name="access_key" value="a5e9b0d1-c7dc-4411-aa72-8730e86969e9">
+    
+                <div class="grid grid-cols-1 gap-6">
+                    <input type="text" placeholder="Ime" name="name" required 
+                           class="p-3 bg-lightGray border border-gray-300 rounded-md focus:ring-2 focus:ring-primeGreen shadow-lg">
+                    <input type="text" placeholder="Prezime" name="surname" required 
+                           class="p-3 bg-lightGray border border-gray-300 rounded-md focus:ring-2 focus:ring-primeGreen shadow-lg">
+                    <input type="email" placeholder="Email" name="email" required 
+                           class="p-3 bg-lightGray border border-gray-300 rounded-md focus:ring-2 focus:ring-primeGreen shadow-lg">
                 </div>
+    
+                <textarea name="message" rows="6" placeholder="Vaša Poruka" required 
+                          class="w-full bg-lightGray mt-6 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primeGreen shadow-lg"></textarea>
+    
+                <button type="submit" 
+                        class="mt-6 w-full flex items-center justify-center gap-2 bg-primeGreen text-white py-3 rounded-md text-lg font-semibold hover:bg-primeYellow transition duration-300">
+                    Pošaljite Poruku
+                    <img src="../images/send-msg.png" alt="" class="w-6 mt-1">
+                </button>
+            </form>
+        </div>
+    
+        <!-- Company Info Section -->
+        <div class="p-[32.5px] bg-white shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-darkGray mb-4 text-center uppercase">Podaci za Identifikaciju</h2>
+    
+            <table class="w-full bg-lightGray border-collapse rounded-lg border border-gray-200 text-left shadow-lg">
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-100 transition duration-200">
+                        <td class="py-2 px-3 font-medium">Naziv firme:</td>
+                        <td class="py-2 px-3">ROK ŠPED PLUS DOO SMEDEREVO</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 transition duration-200">
+                        <td class="py-2 px-3 font-medium">Šifra Delatnosti:</td>
+                        <td class="py-2 px-3">5229</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 transition duration-200">
+                        <td class="py-2 px-3 font-medium">PIB:</td>
+                        <td class="py-2 px-3">111326846</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 transition duration-200">
+                        <td class="py-2 px-3 font-medium">Matični broj:</td>
+                        <td class="py-2 px-3">21462888</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 transition duration-200">
+                        <td class="py-2 px-3 font-medium">Sedište:</td>
+                        <td class="py-2 px-3">Kolarski Put 330, Sprat 3, Smederevo 11300, Srbija</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 transition duration-200">
+                        <td class="py-2 px-3 font-medium">Pravna forma:</td>
+                        <td class="py-2 px-3">Društvo sa ograničenom odgovornošću (D.O.O.)</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 transition duration-200">
+                        <td class="py-2 px-3 font-medium">Banka:</td>
+                        <td class="py-2 px-3">Raiffeisen Bank</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 transition duration-200">
+                        <td class="py-2 px-3 font-medium">Broj računa:</td>
+                        <td class="py-2 px-3">265-6410310004731-46</td>
+                    </tr>
+                </tbody>
+            </table>
 
-                <h2 class="text-4xl font-bold text-white mt-8 text-decoration: uppercase">Tekući račun</h2>
-
-                <div class="grid grid-cols-3 gap-2 mt-5">
-                    <p class="text-lg font-bold text-white">Banka:</p>
-                    <p class="text-sm text-gray-300 mb-2 leading-relaxed col-span-2 pt-1">Raiffeisen Bank</p>
-
-                    <p class="text-lg font-bold text-white">Broj računa:</p>
-                    <p class="text-sm text-gray-300 mb-2 leading-relaxed col-span-2 pt-1">265-6410310004731-46</p>
-
-                    <a href="#location" class="px-4 py-3 col-end-4 text-center bg-primeGreen text-white font-semibold rounded-lg shadow-md 
-            hover:bg-primeYellow hover:text-darkGray hover:scale-105 transition duration-500">
-                        Lokacije
-                    </a>
-                </div>
-
-            </div>
+            <a  href="../locations" class="mt-7 w-full flex items-center justify-center gap-2 bg-primeGreen text-white py-3 rounded-md text-lg font-semibold hover:bg-primeYellow transition duration-300 shadow-lg">
+                Lokacije
+            </a>
         </div>
     </div>
-
-
-    <!-- FOOTER -->
-    <div class="mt-10">
-        <div class="text-center">
-            <img src="../images/logonav.png" alt="" class="w-36 mx-auto">
-            <div class="w-max flex items-center gap-2 mx-auto">
-                <a href="mailto:office@roksped.rs" class="hover:underline">office@roksped.rs</a>
-            </div>
-        </div>
-
-        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-5 py-5">
-            <p>Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
-            <p>Designed by <a href="https://jovanljusic.com" target="_blank" class="hover:underline">Jovan Ljusic</a>
-            </p>
-
-        </div>
-    </div>
+    
 
     <!-- Website redesign by Jovan Ljusic, 2024. Contact: contact@jovanljusic.com -->
 

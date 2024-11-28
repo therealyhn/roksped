@@ -10,6 +10,7 @@ tailwind.config = {
             },
             colors: {
                 primeGreen: '#6BAE45',
+                darkGreen: '#558B37',
                 primeYellow: '#FFC107',
                 darkGray: '#343A40',
                 lightGray: '#f5f5f5',
