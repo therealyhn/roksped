@@ -20,6 +20,9 @@ tailwind.config = {
             },
             gridTemplateColumns: {
                 'proj': '500px minmax(900px, 1fr) 100px'
+            },
+            flex: {
+                '3': '3 3 0%',
             }
         }
     }

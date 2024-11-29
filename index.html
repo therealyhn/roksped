@@ -13,40 +13,36 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
-<body class="relative bg-fixed bg-center bg-cover bg-no-repeat"
-    style="background-image:linear-gradient(rgba(214, 214, 214, 0.8), rgba(205, 205, 205, 0.8)), url(./images/texture.jpg);
-    user-select: none;">
+<body class="bg-lightGray" style="user-select: none;">
 
     <!-- NAV -->
 
-    <nav id="nav"
-        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between
+    <nav id="nav" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between
          z-50 bg-darkGray bg-opacity-40 backdrop-blur-md hover-custom-filter">
 
         <img src="images/logo-nav.png" alt="logo"
-            class="w-28 cursor-pointer hover-custom-filter-logo transition duration-500">
+            class="w-20 cursor-pointer hover-custom-filter-logo transition duration-500">
 
-        <ul id="menu-1"
-            class="hidden md:flex items-center gap-10 lg:gap-12 hover-custom-filter
-            text-white font-semibold text-xl text-transform: uppercase">
+        <ul id="menu-1" class="hidden md:flex items-center gap-10 lg:gap-12 hover-custom-filter
+            text-white font-semibold text-md text-transform: uppercase">
             <li><a href="#top" class="hover:text-primeGreen transition duration-500">Naslovna</a></li>
             <li><a href="services" class="hover:text-primeGreen transition duration-500">Usluge</a></li>
-            <li><a href="contact" class="hover:text-primeGreen transition duration-500">Kontakt</a></li>
-            <li><a href="locations" class="hover:text-primeGreen transition duration-500">Lokacije</a></li>
+            <li><a href="contact_locations" class="hover:text-primeGreen transition duration-500">Kontakt &amp;
+                    Lokacije</a></li>
             <li><a href="clients" class="hover:text-primeGreen transition duration-500">Saradnici</a></li>
         </ul>
 
         <div class="relative text-white flex items-center gap-5">
             <button
-                class="flex items-center gap-1 w-20 justify-between hover-custom-filter-shadow transition duration-500"
+                class="flex items-center gap-1 w-18 justify-between hover-custom-filter-shadow transition duration-500"
                 id="language-button">
                 <img src="images/globe-icon.png" alt="language-change" class="w-8">
                 <span class="text-sm md:text-base font-medium">Srpski</span>
             </button>
 
             <div id="language-popup"
-                class="hidden absolute text-black mt-2 left-0 bg-white border border-gray-300 shadow-md rounded-md w-40">
-                <div class="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer rounded-md"
+                class="hidden absolute text-black mt-2 left-0 bg-white border border-gray-300 shadow-md rounded-sm w-40">
+                <div class="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer rounded-sm"
                     id="language-option">
                     <img src="images/en-icon.png" alt="English" class="w-6">
                     English
@@ -69,8 +65,8 @@
             </div>
             <li><a href="#top" class="hover:text-primeYellow transition duration-500">Naslovna</a></li>
             <li><a href="services" class="hover:text-primeYellow transition duration-500">Usluge</a></li>
-            <li><a href="contact" class="hover:text-primeYellow transition duration-500">Kontakt</a></li>
-            <li><a href="locations" class="hover:text-primeYellow transition duration-500">Lokacije</a></li>
+            <li><a href="contact_locations" class="hover:text-primeYellow transition duration-500">Kontakt &amp;
+                    Lokacije</a></li>
             <li><a href="clients" class="hover:text-primeYellow transition duration-500">Saradnici</a></li>
         </ul>
 
@@ -83,7 +79,8 @@
             <div class="flex flex-col items-center md:w-11/12 mx-10 md:mt-[7%] md:mx-[5%]">
                 <img src="./images/logo.png" alt="" class="hover-custom-filter transition duration-500 w-[600px]">
 
-                <h1 class="font-bold text-4xl md:text-[64px] mt-8 mb-5 text-white text-transform: uppercase">Rok Šped Plus D.O.O.</h1>
+                <h1 class="font-bold text-4xl md:text-[64px] mt-8 mb-5 text-white text-transform: uppercase">Rok Šped
+                    Plus D.O.O.</h1>
                 <h3 class=" text-xl md:text-3xl mb-5 font-semibold text-lightGray">Medjunarodna
                     Špedicija i Transport</h3>
                 <p class="max-w-2xl mx-auto text-primeYellow font-semibold mb-5 text-lg 
@@ -91,9 +88,9 @@
                     Srbija</p>
             </div>
 
-            <a href="#about" class="px-6 py-3 bg-primeGreen font-semibold rounded-md shadow-lg 
-             hover:text-lightGray hover:scale-105 transition duration-500 text-xl text-darkGray">
-                SAZNAJTE VIŠE...
+            <a href="#about" class="px-6 py-3 bg-primeGreen font-semibold rounded-sm shadow-lg 
+              hover:scale-105 transition duration-500 text-md text-lightGray hover:bg-primeYellow">
+                SAZNAJTE VIŠE
             </a>
 
         </div>
@@ -101,52 +98,51 @@
 
     <!-- ABOUT -->
 
-    <div id="about" class="w-full h-screen scroll-mt-[100.5px] relative flex flex-col">
-
+    <div id="about" class="w-full min-h-screen md:scroll-mt-20 relative flex flex-col">
         <!-- Background Image -->
-        <div class="w-full h-80">
+        <div class="hidden md:block w-full h-80">
             <img src="images/truck1.jpg" alt="Truck Image" class="w-full h-full object-cover">
         </div>
-
-        <div
-            class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl 
-            flex flex-col items-center bg-darkGray text-white px-2 md:px-10 pt-5 pb-10
-             rounded-xl  hover-custom-filter
-             bg-opacity-80 backdrop-blur-sm text-center space-y-14 min-h-[500px]">
-            <h1 class="text-4xl pt-5 md:pt-2 font-bold">O Nama</h1>
-            <p class="text-base md:text-lg leading-relaxed ">
+    
+        <!-- Content Section -->
+        <div class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl 
+            flex flex-col items-center bg-darkGray text-white px-6 sm:px-8 md:px-10 pt-5 pb-10 rounded-sm 
+            bg-opacity-90 backdrop-blur-sm text-center space-y-6 sm:space-y-8 min-h-[450px] sm:min-h-[500px]">
+            <h1 class="text-xl sm:text-2xl md:text-4xl pt-3 md:pt-2 font-bold">O Nama</h1>
+            <p class="text-sm sm:text-md md:text-lg leading-relaxed">
                 Rok Šped Plus D.O.O. pruža pravovremene, sigurne i pouzdane usluge u oblasti međunarodne špedicije i
                 transporta, poslujući na visoko stručnom nivou uz otvorenu i ljubaznu komunikaciju naših zaposlenih.
-                Naš
-                tim, sa preko 15 godina iskustva u carinskom posredovanju i zastupanju, garantuje vrhunski kvalitet
+                Naš tim, sa preko 15 godina iskustva u carinskom posredovanju i zastupanju, garantuje vrhunski kvalitet
                 usluga po konkurentnim cenama.
-
+    
                 Bilo da su vaši proizvodi ili sirovine u postupku uvoza, izvoza ili nekom drugom carinskom procesu,
-                obezbeđujemo efikasno zastupanje pred carinskim organima uz brzo i pouzdano sprovođenje svih
-                formalnosti. Praćenje i primena izmena u carinskom i spoljnotrgovinskom zakonodavstvu deo su naše
-                svakodnevne prakse, čime osiguravamo ažurnost i usklađenost sa svim propisima.
-
+                obezbeđujemo efikasno zastupanje pred carinskim organima uz brzo i pouzdano sprovođenje svih formalnosti.
+                Praćenje i primena izmena u carinskom i spoljnotrgovinskom zakonodavstvu deo su naše svakodnevne prakse,
+                čime osiguravamo ažurnost i usklađenost sa svim propisima.
+    
                 Našim klijentima iz različitih sektora privrede pružamo sigurnost, pouzdanost i kvalitet usluga, uz
                 minimizaciju troškova i maksimalnu efikasnost. Uz Rok Šped Plus D.O.O. vaše logističke potrebe su u
                 sigurnim rukama.
             </p>
-            <a href="./services" class="px-6 py-3 bg-primeGreen text-white font-semibold rounded-lg shadow-md 
-            hover:bg-primeYellow hover:text-darkGray hover:scale-105 transition duration-500">
-                Pogledajte usluge
+            <a href="services" class="px-8 sm:px-10 py-2 sm:py-3 bg-primeGreen font-semibold rounded-sm shadow-lg 
+             hover:bg-primeYellow hover:scale-105 transition duration-500 text-sm sm:text-md text-lightGray">
+                USLUGE
             </a>
         </div>
     </div>
+    
 
     <!-- FOOTER -->
 
-    <div class="mt-10 bg-darkGray pt-5 pb-5 bg-opacity-80">
+    <div class=" bg-darkGray pt-5 pb-5 bg-opacity-80">
         <div class="text-center flex flex-col items-center justify-center w-6/12 mx-auto">
             <img src="images/logo-nav.png" alt="" class="w-28 mx-auto">
             <div class="w-max flex items-center gap-2 mx-auto">
                 <a href="mailto:office@roksped.rs" class="hover:underline text-lightGray text-lg">office@roksped.rs</a>
             </div>
             <p class="text-lightGray">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
-            <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank" class="hover:underline">Jovan
+            <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank"
+                    class="hover:underline">Jovan
                     Ljusic</a>
             </p>
         </div>

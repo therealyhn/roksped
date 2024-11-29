@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
-<body style="user-select: none;">
+<body class="bg-lightGray" style="user-select: none;">
 
     <!-- NAV -->
 
@@ -21,28 +21,28 @@
     z-50 bg-opacity-80 bg-darkGray backdrop-blur-md">
 
         <img src="../images/logo-nav.png" alt="logo"
-            class="w-28 cursor-pointer hover-custom-filter-logo transition duration-500">
+            class="w-20 cursor-pointer hover-custom-filter-logo transition duration-500">
 
         <ul id="menu-1"
-            class="hidden md:flex items-center gap-10 lg:gap-12 text-white text-xl font-semibold text-transform: uppercase">
+            class="hidden md:flex items-center gap-10 lg:gap-12 text-white text-md font-semibold text-transform: uppercase">
             <li><a href="../index.html" class="hover:text-primeGreen transition duration-500">Naslovna</a></li>
             <li><a href="../services" class="hover:text-primeGreen transition duration-500">Ostale Usluge</a></li>
-            <li><a href="../contact" class="hover:text-primeGreen transition duration-500">Kontakt</a></li>
-            <li><a href="../locations" class="hover:text-primeGreen transition duration-500">Lokacije</a></li>
+            <li><a href="../contact_locations" class="hover:text-primeGreen transition duration-500">Kontakt &amp;
+                    Lokacije</a></li>
             <li><a href="../clients" class="hover:text-primeGreen transition duration-500">Saradnici</a></li>
         </ul>
 
         <div class="relative text-white flex items-center gap-5">
             <button
-                class="flex items-center gap-1 w-20 justify-between hover-custom-filter-shadow transition duration-500"
+                class="flex items-center gap-1 w-18 justify-between hover-custom-filter-shadow transition duration-500"
                 id="language-button">
                 <img src="../images/globe-icon.png" alt="language-change" class="w-8">
                 <span class="text-sm md:text-base font-medium">Srpski</span>
             </button>
 
             <div id="language-popup"
-                class="hidden absolute text-black mt-2 left-0 bg-white border border-gray-300 shadow-md rounded-md w-40">
-                <div class="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer rounded-md"
+                class="hidden absolute text-black mt-2 left-0 bg-white border border-gray-300 shadow-md rounded-sm w-40">
+                <div class="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer rounded-sm"
                     id="language-option">
                     <img src="../images/en-icon.png" alt="English" class="w-6 text-darkGray">
                     English
@@ -65,62 +65,69 @@
             </div>
             <li><a href="../index.html" class="hover:text-primeYellow transition duration-500">Naslovna</a></li>
             <li><a href="../services" class="hover:text-primeYellow transition duration-500">Ostale Usluge</a></li>
-            <li><a href="../contact" class="hover:text-primeYellow transition duration-500">Kontakt</a></li>
-            <li><a href="../location" class="hover:text-primeYellow transition duration-500">Lokacije</a></li>
+            <li><a href="../contact_locations" class="hover:text-primeYellow transition duration-500">Kontakt &amp;
+                    Lokacije</a></li>
             <li><a href="../clients" class="hover:text-primeYellow transition duration-500">Saradnici</a></li>
         </ul>
 
     </nav>
 
     <!-- HEADER -->
+    <div class="bg-[url('../images/services-header.png')] bg-center bg-cover bg-no-repeat">
+        <div
+            class="w-11/12 max-w-4xl text-center mx-auto md:pt-20 min-h-screen flex flex-col items-center justify-center gap-6 sm:gap-8">
 
-    <div class="bg-[url('../images/transport-header.png')] bg-center bg-cover">
-        <div class="w-11/12 max-w-4xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-
-            <div class="flex flex-col items-center md:w-11/12 mx-10 md:mt-[7%] md:mx-[5%]">
+            <div class="flex flex-col items-center w-full md:w-11/12 px-4  sm:px-8 md:px-12">
 
                 <h1
-                    class="font-bold text-4xl md:text-[64px] mt-8 mb-16 text-primeYellow text-transform: uppercase">
-                    Transport</h1>
-                <h3 class=" text-lg md:text-2xl mb-20 font-semibold text-white">Profesionalna usluga transporta i
-                    distribucije koja uključuje preuzimanje i dostavu pošiljki, pakovanje uz stručne savete za optimalno
-                    pakovanje, kao i inspekcijske preglede i carinsko posredovanje, omogućava vam da vaše pošiljke
-                    sigurno i efikasno krenu "od vrata do vrata" uz minimalan angažman s vaše strane. Naš širok spektar
-                    usluga transporta i distribucije pruža vam prilagođena rešenja koja zadovoljavaju sve vaše potrebe i
-                    obezbeđuju brz, siguran i pouzdan transport. Prepoznajte vaše idealno rešenje među našim uslugama!
+                    class="font-bold text-4xl sm:text-4xl md:text-[64px] mt-6 md:mt-10 pb-8 md:pb-16 text-primeYellow uppercase">
+                    Transport
+                </h1>
+
+                <h3
+                    class="text-lg sm:text-lg md:text-2xl md-2 md:mb-12 md:mb-4 font-semibold text-lightGray w-full sm:w-3/4 md:w-full leading-relaxed">
+                    Profesionalna usluga transporta i distribucije koja uključuje preuzimanje i dostavu pošiljki,
+                    pakovanje uz stručne savete za optimalno pakovanje, kao i inspekcijske preglede i carinsko
+                    posredovanje, omogućava vam da vaše pošiljke sigurno i efikasno krenu "od vrata do vrata" uz
+                    minimalan angažman s vaše strane. Naš širok spektar usluga transporta i distribucije pruža vam
+                    prilagođena rešenja koja zadovoljavaju sve vaše potrebe i obezbeđuju brz, siguran i pouzdan
+                    transport. Prepoznajte vaše idealno rešenje među našim uslugama!
                 </h3>
             </div>
 
-            <a href="#services" class="flex items-center justify-evenly gap-2 px-10 py-3 bg-primeGreen font-semibold rounded-md shadow-lg 
-             hover:bg-primeYellow hover:scale-105 transition duration-500 text-xl text-black">
-                SVE TRANSPORT USLUGE
-                <img src="../images/arrow.png" alt="" class="w-[15px] mt-1">
-            </a>
 
+            <a href="#services" class="flex items-center justify-center gap-2 px-10 sm:px-10 py-3 sm:py-3 bg-primeGreen 
+                font-semibold rounded-sm shadow-lg mt-8 md:mt-20 hover:bg-primeYellow hover:scale-105 transition 
+                duration-500 text-sm sm:text-md text-black">
+                TRANSPORT USLUGE
+                <img src="../images/arrow.png" alt="Arrow Icon" class="w-4 sm:w-5 mt-0.5">
+            </a>
         </div>
     </div>
 
+
     <!-- TRANSPORT SERVICES  -->
 
-    <div id="services" class="w-full scroll-mt-[101px] grid grid-cols-1">
+    <div id="services" class="w-full scroll-mt-[30px] md:scroll-mt-20 grid grid-cols-1">
 
         <!-- DRUMSKI -->
         <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="w-full">
+            <div class="w-full hidden md:block">
                 <img src="../images/transport.png" alt="" class="w-full bg-cover bg-center bg-no-repeat">
             </div>
 
-            <div class="absolute top-[115%] left-[40%] w-1/3 border-t-[5px] border-primeGreen">
+            <div class="hidden md:block absolute top-[115%] left-[40%] w-1/3 border-t-[5px] border-primeGreen">
                 <div class="absolute left-[-12px] bottom-[-22px] w-12 h-12 border-4 border-primeGreen rounded-full">
                 </div>
                 <div class="absolute left-0 bottom-[-10px] w-6 h-6 bg-primeGreen rounded-full"></div>
             </div>
 
-            <div class="flex flex-col items-left gap-2 mx-20 pt-10">
+            <div class="flex flex-col items-left gap-2 mx-10 md:mx-20 pt-10">
 
-                <div class="flex items-center gap-10 mb-14">
-                    <img src="../images/road-icon.png" alt="" class="w-16 mt-4">
-                    <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-8">Drumski transport</h1>
+                <div class="flex items-center gap-2 md:gap-10 mb-5">
+                    <img src="../images/road-icon.png" alt="" class="w-16 mt-10 md:mt-4">
+                    <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-8">Drumski transport
+                    </h1>
                 </div>
 
                 <p class=" text-lg text-darkGray">
@@ -134,7 +141,8 @@
                     <li>Puni ili delimični kamionski utovari</li>
                     <li>Zbirne kamionske pošiljke</li>
                 </ul>
-                <a href="../contact" class="text-lg font-bold mt-5 text-primeGreen hover:text-primeYellow transition duration-500">
+                <a href="../contact_locations"
+                    class="text-lg font-bold mt-5 text-primeGreen hover:text-primeYellow transition duration-500">
                     Kontaktirajte nas
                 </a>
             </div>
@@ -143,14 +151,15 @@
         <!-- VODENI  -->
         <div class="grid grid-cols-1 md:grid-cols-2">
 
-            <div class="flex flex-col items-left gap-2 mx-20 pt-10">
+            <div class="flex flex-col items-left gap-2 mx-10 md:mx-20 pt-10">
 
-                <div class="flex items-center gap-10 mb-10 ml-[100px]">
-                    <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-10">Vodeni Transport</h1>
-                    <img src="../images/ship-icon.png" alt="" class="w-20">
+                <div class="flex items-center gap-10 mb-5 w-full md:ml-[200px]">
+                    <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-10">Vodeni transport</h1>
+                    <img src="../images/ship-icon.png" alt="" class="w-20 mt-8 md:mt-0">
                 </div>
 
-                <p class=" text-lg text-darkGray">Efikasan
+                <p class=" text-lg text-darkGray">
+                    Efikasan
                     transport robe vodenim saobraćajem iziskuje uključenje i drugih vidova saobraćaja.
                     Pored pouzdane, efikasne i kvalitetne usluge transporta robe vodenim saobraćajem,
                     ujedno Vam nudimo i pronalaženje adekvatne rute kako bi se određena količina robe
@@ -163,16 +172,17 @@
                     <li>Obezbeđenje adekvatnog tovarnog prostora na tržištu</li>
                     <li>Koordinaciju i sinhronizaciju rada svih učesnika u prevozu</li>
                 </ul>
-                <a href="../contact" class="text-lg font-bold  text-primeGreen hover:text-primeYellow transition duration-500">
+                <a href="../contact_locations"
+                    class="text-lg font-bold  text-primeGreen hover:text-primeYellow transition duration-500">
                     Kontaktirajte nas
                 </a>
             </div>
 
-            <div class="w-full">
+            <div class="w-full hidden md:block">
                 <img src="../images/vodeni.jpg" alt="" class="w-full bg-cover bg-center bg-no-repeat">
             </div>
 
-            <div class="absolute top-[180%] left-[25%] w-1/3 border-t-[5px] border-primeGreen">
+            <div class="hidden md:block absolute top-[180%] left-[25%] w-1/3 border-t-[5px] border-primeGreen">
                 <div class="absolute right-[-12px] bottom-[-22px] w-12 h-12 border-4 border-primeGreen rounded-full">
                 </div>
                 <div class="absolute right-0 bottom-[-10px] w-6 h-6 bg-primeGreen rounded-full"></div>
@@ -181,24 +191,24 @@
 
         <!-- AVIO -->
         <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="w-full">
+            <div class="w-full hidden md:block">
                 <img src="../images/avio.png" alt="" class="w-full bg-cover bg-center bg-no-repeat">
             </div>
 
-            <div class="absolute top-[245%] left-[40%] w-1/3 border-t-[5px] border-primeGreen">
+            <div class="hidden md:block absolute top-[245%] left-[40%] w-1/3 border-t-[5px] border-primeGreen">
                 <div class="absolute left-[-12px] bottom-[-22px] w-12 h-12 border-4 border-primeGreen rounded-full">
                 </div>
                 <div class="absolute left-0 bottom-[-10px] w-6 h-6 bg-primeGreen rounded-full"></div>
             </div>
 
-            <div class="flex flex-col items-left gap-2 mx-20">
+            <div class="flex flex-col items-left gap-2 mx-10 md:mx-20 pt-10">
 
-                <div class="flex items-center gap-10 mb-10">
-                    <img src="../images/avio-icon.png" alt="" class="w-16 mt-16">
-                    <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-20">Avio Transport</h1>
+                <div class="flex items-center gap-5 md:gap-10 mb-5">
+                    <img src="../images/avio-icon.png" alt="" class="w-16 mt-14 md:mt-6">
+                    <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-14">Avio transport</h1>
                 </div>
 
-                <p class="text-lg text-darkGray">
+                <p class=" text-xl text-darkGray">
                     Sve
                     je veći broj zahteva naših klijenata za transportom robe avio saobraćajem, imajući u
                     vidu njegovu ekonomičnost i brzinu. U zavisnosti od destinacije i same količine robe
@@ -209,7 +219,8 @@
                     sve vrste dogovora. Cilj nam je da ispunimo sve vaše zahteve i sa ponosom vas dodamo
                     na listu naših zadovoljnih klijenata.
                 </p>
-                <a href="../contact" class="text-lg font-bold mt-5 text-primeGreen hover:text-primeYellow transition duration-500">
+                <a href="../contact_locations"
+                    class="text-lg font-bold mt-2 text-primeGreen hover:text-primeYellow transition duration-500">
                     Kontaktirajte nas
                 </a>
             </div>
@@ -218,12 +229,12 @@
         <!-- ŽELEZNIČKI -->
         <div class="grid grid-cols-1 md:grid-cols-2">
 
-            <div class="flex flex-col items-left gap-2 mx-20 pt-10">
+            <div class="flex flex-col items-left gap-2 mx-10 md:mx-20 pt-10">
 
-                <div class="flex items-center gap-10 mb-14 ml-[100px]">
-                    <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-8">Železnički Transport
+                <div class="flex items-center w-full gap-10 mb-5 md:ml-[130px]">
+                    <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-8">Železnički transport
                     </h1>
-                    <img src="../images/train-icon.png" alt="" class="w-16">
+                    <img src="../images/train-icon.png" alt="" class="w-16 md:mt-0 mt-8">
                 </div>
 
                 <p class=" text-lg text-darkGray">
@@ -234,17 +245,19 @@
                     destinacije. Železnički transport robe spada u red najekonomičnijih vidova
                     transporta. Ukoliko ste se odlučili da se vaša roba transportuje železnicom, naša
                     kompanija vam stoji na raspolaganju za svu logističku podršku.
+
                 </p>
-                <a href="../contact" class="text-lg font-bold mt-5 text-primeGreen hover:text-primeYellow transition duration-500">
+                <a href="../contact_locations"
+                    class="text-lg font-bold  mt-5 md:mt-10 mb-10 text-primeGreen hover:text-primeYellow transition duration-500">
                     Kontaktirajte nas
                 </a>
             </div>
 
-            <div class="w-full">
-                <img src="../images/zeleznicki.png" alt="" class="w-full bg-cover bg-center bg-no-repeat">
+            <div class="w-full hidden md:block">
+                <img src="../images/transport.png" alt="" class="w-full bg-cover bg-center bg-no-repeat">
             </div>
 
-            <div class="absolute top-[307%] left-[25%] w-1/3 border-t-[5px] border-primeGreen">
+            <div class="hidden md:block absolute top-[306%] left-[25%] w-1/3 border-t-[5px] border-primeGreen">
                 <div class="absolute right-[-12px] bottom-[-22px] w-12 h-12 border-4 border-primeGreen rounded-full">
                 </div>
                 <div class="absolute right-0 bottom-[-10px] w-6 h-6 bg-primeGreen rounded-full"></div>
@@ -255,22 +268,20 @@
 
     <!-- FOOTER -->
 
-    <footer>
-        <div class=" bg-darkGray pt-5 pb-5 bg-opacity-80">
-            <div class="text-center flex flex-col items-center justify-center w-6/12 mx-auto">
-                <img src="../images/logo-nav.png" alt="" class="w-28 mx-auto">
-                <div class="w-max flex items-center gap-2 mx-auto">
-                    <a href="mailto:office@roksped.rs"
-                        class="hover:underline text-lightGray text-lg">office@roksped.rs</a>
-                </div>
-                <p class="text-lightGray">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
-                <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank"
-                        class="hover:underline">Jovan
-                        Ljusic</a>
-                </p>
+    <div class=" bg-darkGray pt-5 pb-5 bg-opacity-80">
+        <div class="text-center flex flex-col items-center justify-center w-6/12 mx-auto">
+            <img src="../images/logo-nav.png" alt="" class="w-28 mx-auto">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <a href="mailto:office@roksped.rs" class="hover:underline text-lightGray text-lg">office@roksped.rs</a>
             </div>
+            <p class="text-lightGray">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
+            <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank"
+                    class="hover:underline">Jovan
+                    Ljusic</a>
+            </p>
         </div>
-    </footer>
+    </div>
+
 
     <!-- Website redesign by Jovan Ljusic, 2024. Contact: contact@jovanljusic.com -->
 
