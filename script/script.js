@@ -21,4 +21,3 @@ window.addEventListener('scroll', () => {
         navBar.classList.remove('backdrop-blur-md', 'shadow-lg', 'bg-opacity-80');
     }
 });
-
