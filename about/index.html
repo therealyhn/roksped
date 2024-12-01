@@ -18,7 +18,7 @@
     <!-- NAV -->
 
     <nav id="nav" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between
-         z-50 bg-darkGray bg-opacity-70 backdrop-blur-md hover-custom-filter">
+         z-50 bg-darkGray md:bg-opacity-70 backdrop-blur-md hover-custom-filter">
 
         <img src="../images/logo-nav.png" alt="logo" onclick="location.href='#top'"
             class="w-20 cursor-pointer hover-custom-filter-logo transition duration-500">
@@ -26,7 +26,7 @@
         <ul id="menu-1" class="hidden md:flex items-center gap-5 lg:gap-6 hover-custom-filter
             text-white font-semibold text-md text-transform: uppercase">
             <li><a href="../index.html" class="hover:text-primeGreen transition duration-500">Početna</a></li>
-            <li><a href="#top" class="hover:text-primeGreen transition duration-500">O nama</a></li>
+            <li><a href="../about" class="hover:text-primeGreen transition duration-500">O nama</a></li>
             <li><a href="../services" class="hover:text-primeGreen transition duration-500">Usluge</a></li>
             <li><a href="../contact_locations" class="hover:text-primeGreen transition duration-500">Kontakt &amp;
                     Lokacije</a></li>
@@ -54,8 +54,8 @@
             <div class="absolute right-6 top-6" onclick="closeMenu()">
                 <img src="../images/close.png" alt="" class="w-5 cursor-pointer">
             </div>
-            <li><a href="#top" class="hover:text-primeYellow transition duration-500">Početna</a></li>
-            <li><a href="about" class="hover:text-primeYellow transition duration-500">O nama</a></li>
+            <li><a href="../index.html" class="hover:text-primeYellow transition duration-500">Početna</a></li>
+            <li><a href="../about" class="hover:text-primeYellow transition duration-500">O nama</a></li>
             <li><a href="../services" class="hover:text-primeYellow transition duration-500">Usluge</a></li>
             <li><a href="../contact_locations" class="hover:text-primeYellow transition duration-500">Kontakt &amp;
                     Lokacije</a></li>
@@ -78,7 +78,8 @@
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-primeYellow pb-1 border-b-2 border-primeGreen">
                 O NAMA
             </h1>
-            <h2 class="text-md md:text-lg lg:text-xl font-bold text-lightGray border-t-2 border-primeGreen">ROK ŠPED PLUS SMEDEREVO</h2>
+            <h2 class="text-md md:text-lg lg:text-xl font-bold text-lightGray border-t-2 border-primeGreen">ROK ŠPED
+                PLUS SMEDEREVO</h2>
         </div>
 
         <div class="w-11/12 max-w-5xl mx-auto md:pt-5 pb-10 relative">
@@ -124,7 +125,7 @@
                     <h1 class="text-lg pb-3 pt-2 text-primeGreen font-bold uppercase">Sertifikacija</h1>
                     <a target="_blank"
                         href="https://verify.safesigned.com/certificate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZXJ0aWZpY2F0ZV9pZCI6NzQ2NiwidG9rZW4iOiJGMEYwIiwidmVyaWZpZWQiOjAsImRvbWFpbiI6bnVsbCwiaHR0cHNfdXNlZCI6ZmFsc2UsInNjbF90eXBlIjpudWxsLCJzYl9sb2dvX2lkIjpudWxsLCJzZWFsX3NoYXBlIjoiNCIsInRleHRfaWQiOm51bGwsImNsaWVudF9pcCI6IjE4OC4yNTUuMTY0LjE0MCIsIm1pbmljb2RlIjpudWxsLCJyZWZlcnJlciI6IiIsInVybCI6Imh0dHA6Ly93d3cucm9rc3BlZC5ycy9rb250YWt0LWktbG9rYWNpamUiLCJjZXJ0aWZpY2F0ZV90eXBlX2lkIjoyNDQsImNvZGluZ19rZXkiOiJsWUZicGxhM2F3anlOZnEifQ.DMT1wPW9NHv_m7weoj1bcHNTXQL6Y9XP2JimuTEjKTk">
-                        <img src="../images/partners/certificate-logo.png" alt=""
+                        <img src="../images/certificate-logo.png" alt=""
                             class="w-40 mx-auto md:mx-0 md:mt-5"></a>
                 </div>
             </div>
@@ -132,19 +133,43 @@
     </div>
 
     <!-- FOOTER -->
-
-    <div class=" bg-darkGray pt-5 pb-5 bg-opacity-80">
-        <div class="text-center flex flex-col items-center justify-center w-6/12 mx-auto">
-            <img src="../images/logo-nav.png" alt="" class="w-28 mx-auto">
-            <div class="w-max flex items-center gap-2 mx-auto">
-                <a href="mailto:office@roksped.rs" class="hover:underline text-lightGray text-lg">office@roksped.rs</a>
+    <div class="bg-darkGray py-4">
+        <div class="text-center flex items-center justify-center md:mx-auto">
+            <div class="px-2 flex flex-col items-center">
+                <img src="../images/logo.png" alt="" class="md:w-40 w-28">
+                <p class="text-lightGray md:mt-2">Rok Šped Plus d.o.o.</p>
             </div>
-            <p class="text-lightGray">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
-            <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank"
-                    class="hover:underline">Jovan
-                    Ljusic</a>
-            </p>
+
+            <div class="flex flex-col gap-2 items-left border-l-2 border-primeGreen md:pl-11 pl-2">
+                <div class="flex items-left gap-1 md:gap-5">
+                    <img src="../images/phone-icon.png" alt="" class="w-6">
+                    <p class="text-lightGray hover:text-primeGreen
+                    transition duration-500">+381 64 13 09 794</p>
+                </div>
+                <div class="flex items-center gap-1 md:gap-5">
+                    <img src="../images/email-icon.png" alt="" class="w-6">
+                    <a href="mailto:office@roksped.rs" class="text-lightGray hover:text-primeGreen
+                    transition duration-500">office@roksped.rs</a>
+                </div>
+                <div class="flex items-center gap-1 md:gap-5">
+                    <img src="../images/location-icon.png" alt="" class="w-6">
+                    <a href="https://maps.app.goo.gl/2z7FkEPnUddgFJTJ6" target="_blank" class="text-lightGray hover:text-primeGreen
+                    transition duration-500">Kolarski Put 330, Smederevo</a>
+                </div>
+                <div class="flex items-center gap-1 md:gap-5">
+                    <img src="../images/web-icon.png" alt="" class="w-6">
+                    <a href="https://roksped.rs" class="text-lightGray hover:text-primeGreen
+                    transition duration-500">www.roksped.rs</a>
+                </div>
+            </div>
         </div>
+
+        <div class="flex flex-col items-center mt-5">
+            <p class="text-lightGray text-center">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
+            <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank"
+                    class="hover:underline">Jovan Ljusic</a></p>
+        </div>
+
     </div>
 
     <!-- Website redesign by Jovan Ljusic, 2024. Contact: contact@jovanljusic.com -->

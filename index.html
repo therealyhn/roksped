@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sr" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,21 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
+
 <body class="bg-lightGray" style="user-select: none;">
 
     <!-- NAV -->
-    <nav id="nav" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-darkGray bg-opacity-40 backdrop-blur-md hover-custom-filter">
-        <img src="images/logo-nav.png" alt="logo" onclick="location.href='#top'" class="w-20 cursor-pointer hover-custom-filter-logo transition duration-500">
-        <ul id="menu-1" class="hidden md:flex items-center gap-5 lg:gap-6 hover-custom-filter text-white font-semibold text-md text-transform: uppercase">
+    <nav id="nav"
+        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-darkGray bg-opacity-40 backdrop-blur-md hover-custom-filter">
+        <img src="images/logo-nav.png" alt="logo" onclick="location.href='#top'"
+            class="w-20 cursor-pointer hover-custom-filter-logo transition duration-500">
+        <ul id="menu-1"
+            class="hidden md:flex items-center gap-5 lg:gap-6 hover-custom-filter text-white font-semibold text-md text-transform: uppercase">
             <li><a href="#top" class="hover:text-primeGreen transition duration-500">Početna</a></li>
             <li><a href="about" class="hover:text-primeGreen transition duration-500">O nama</a></li>
             <li><a href="services" class="hover:text-primeGreen transition duration-500">Usluge</a></li>
-            <li><a href="contact_locations" class="hover:text-primeGreen transition duration-500">Kontakt &amp; Lokacije</a></li>
+            <li><a href="contact_locations" class="hover:text-primeGreen transition duration-500">Kontakt &amp;
+                    Lokacije</a></li>
             <li><a href="clients" class="hover:text-primeGreen transition duration-500">Saradnici</a></li>
         </ul>
 
@@ -32,15 +38,14 @@
             </button>
 
             <button
-                class="flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
+                class=" flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
                 onclick="openMenu()">
                 <img src="images/menu.png" alt="Menu" class="w-6">
             </button>
         </div>
 
         <!-- MOBILE MENU -->
-        <ul id="side-menu"
-            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen 
+        <ul id="side-menu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen 
             bg-primeGreen transition duration-500 text-transform: uppercase">
             <div class="absolute right-6 top-6" onclick="closeMenu()">
                 <img src="images/close.png" alt="" class="w-5 cursor-pointer">
@@ -59,29 +64,63 @@
         <div class="w-11/12 max-w-4xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
             <div class="flex flex-col items-center md:w-11/12 mx-10 md:mt-[7%] md:mx-[5%]">
                 <img src="./images/logo.png" alt="" class="hover-custom-filter transition duration-500 w-[600px]">
-                <h1 id="header-title" class="font-bold text-4xl md:text-[64px] mt-8 mb-5 text-white text-transform: uppercase">Rok Šped Plus D.O.O.</h1>
-                <h3 id="header-subtitle" class="text-xl md:text-3xl mb-5 font-semibold text-lightGray">Medjunarodna Špedicija i Transport</h3>
-                <p id="header-location" class="max-w-2xl mx-auto text-primeYellow font-semibold mb-5 text-lg md:text-2xl"> Smederevo - Mladenovac, Srbija</p>
+                <h1 id="header-title"
+                    class="font-bold text-4xl md:text-[64px] mt-8 mb-5 text-white text-transform: uppercase">Rok Šped
+                    Plus D.O.O.</h1>
+                <h3 id="header-subtitle" class="text-xl md:text-3xl mb-5 font-semibold text-lightGray">Medjunarodna
+                    Špedicija i Transport</h3>
+                <p id="header-location"
+                    class="max-w-2xl mx-auto text-primeYellow font-semibold mb-5 text-lg md:text-2xl"> Smederevo -
+                    Mladenovac, Srbija</p>
             </div>
-            <a href="about" class="px-6 py-3 bg-primeGreen font-semibold rounded-sm hover:scale-105 hover-custom-filter transition duration-500 text-md text-lightGray hover:bg-primeYellow">
+            <a href="about"
+                class="px-6 py-3 bg-primeGreen font-semibold rounded-sm hover:scale-105 hover-custom-filter transition duration-500 text-md text-lightGray hover:bg-primeYellow">
                 SAZNAJTE VIŠE
             </a>
         </div>
     </div>
 
     <!-- FOOTER -->
-    <div class="bg-darkGray pt-5 pb-5 bg-opacity-80">
-        <div class="text-center flex flex-col items-center justify-center w-6/12 mx-auto">
-            <img src="images/logo-nav.png" alt="" class="w-28 mx-auto">
-            <div class="w-max flex items-center gap-2 mx-auto">
-                <a href="mailto:office@roksped.rs" class="hover:underline text-lightGray text-lg">office@roksped.rs</a>
+    <div class="bg-darkGray py-4">
+        <div class="text-center flex items-center justify-center md:mx-auto">
+            <div class="px-2 flex flex-col items-center">
+                <img src="images/logo.png" alt="" class="md:w-40 w-28">
+                <p class="text-lightGray md:mt-2">Rok Šped Plus d.o.o.</p>
             </div>
-            <p class="text-lightGray">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
-            <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank" class="hover:underline">Jovan Ljusic</a></p>
+
+            <div class="flex flex-col gap-2 items-left border-l-2 border-primeGreen md:pl-11 pl-2">
+                <div class="flex items-left gap-1 md:gap-5">
+                    <img src="images/phone-icon.png" alt="" class="w-6">
+                    <p class="text-lightGray hover:text-primeGreen
+                    transition duration-500">+381 64 13 09 794</p>
+                </div>
+                <div class="flex items-center gap-1 md:gap-5">
+                    <img src="images/email-icon.png" alt="" class="w-6">
+                    <a href="mailto:office@roksped.rs" class="text-lightGray hover:text-primeGreen
+                    transition duration-500">office@roksped.rs</a>
+                </div>
+                <div class="flex items-center gap-1 md:gap-5">
+                    <img src="images/location-icon.png" alt="" class="w-6">
+                    <a href="https://maps.app.goo.gl/2z7FkEPnUddgFJTJ6" target="_blank" class="text-lightGray hover:text-primeGreen
+                    transition duration-500">Kolarski Put 330, Smederevo</a>
+                </div>
+                <div class="flex items-center gap-1 md:gap-5">
+                    <img src="images/web-icon.png" alt="" class="w-6">
+                    <a href="https://roksped.rs" class="text-lightGray hover:text-primeGreen
+                    transition duration-500">www.roksped.rs</a>
+                </div>
+            </div>
         </div>
+
+        <div class="flex flex-col items-center mt-5">
+            <p class="text-lightGray text-center">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
+            <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank"
+                    class="hover:underline">Jovan Ljusic</a></p>
+        </div>
+
     </div>
 
-    <!-- Scripts -->
     <script src="script/script.js"></script>
 </body>
+
 </html>
