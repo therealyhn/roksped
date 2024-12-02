@@ -20,9 +20,9 @@
     <nav id="nav"
         class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-darkGray bg-opacity-40 backdrop-blur-md hover-custom-filter">
         <img src="images/logo-nav.png" alt="logo" onclick="location.href='#top'"
-            class="w-20 cursor-pointer hover-custom-filter-logo transition duration-500">
+            class="w-20 cursor-pointer hover-custom-filter-logo transition duration-500 md:ml-20">
         <ul id="menu-1"
-            class="hidden md:flex items-center gap-5 lg:gap-6 hover-custom-filter text-white font-semibold text-md text-transform: uppercase">
+            class="hidden md:flex items-center gap-5 lg:gap-10 hover-custom-filter text-white font-semibold text-md text-transform: uppercase">
             <li><a href="#top" class="hover:text-primeGreen transition duration-500">Početna</a></li>
             <li><a href="about" class="hover:text-primeGreen transition duration-500">O nama</a></li>
             <li><a href="services" class="hover:text-primeGreen transition duration-500">Usluge</a></li>
@@ -31,19 +31,19 @@
             <li><a href="clients" class="hover:text-primeGreen transition duration-500">Saradnici</a></li>
         </ul>
 
-        <div class="relative text-white flex items-center gap-5">
+        <div class="hidden relative text-white flex items-center gap-5">
             <!-- Language Toggle Button -->
             <button id="language-button" class="flex items-center gap-1 justify-between">
-                <img src="images/globe-icon.png" alt="language-change" class="w-8">
+                <img src="../images/globe-icon.png" alt="language-change" class="w-8">
                 <span id="current-language" class="text-md">EN</span>
             </button>
-
-            <button
-                class=" flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
-                onclick="openMenu()">
-                <img src="images/menu.png" alt="Menu" class="w-6">
-            </button>
         </div>
+
+        <button
+            class="flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
+            onclick="openMenu()">
+            <img src="images/menu.png" alt="Menu" class="w-6">
+        </button>
 
         <!-- MOBILE MENU -->
         <ul id="side-menu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen 
