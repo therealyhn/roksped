@@ -32,21 +32,20 @@
                     Lokacije</a></li>
             <li><a href="../clients" class="hover:text-primeGreen transition duration-500">Saradnici</a></li>
         </ul>
-
-        <div class="relative text-white flex items-center gap-5">
+        
+        <div class="hidden relative text-white flex items-center gap-5">
             <!-- Language Toggle Button -->
             <button id="language-button" class="flex items-center gap-1 justify-between">
                 <img src="../images/globe-icon.png" alt="language-change" class="w-8">
                 <span id="current-language" class="text-md">EN</span>
             </button>
-
-            <button
-                class="flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
-                onclick="openMenu()">
-                <img src="../images/menu.png" alt="Menu" class="w-6">
-            </button>
-
         </div>
+
+        <button
+            class="flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
+            onclick="openMenu()">
+            <img src="../images/menu.png" alt="Menu" class="w-6">
+        </button>
 
         <!-- MOBILE MENU -->
         <ul id="side-menu"
