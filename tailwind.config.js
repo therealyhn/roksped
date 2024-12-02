@@ -23,6 +23,10 @@ tailwind.config = {
             },
             flex: {
                 '3': '3 3 0%',
+            },
+            fontFamily: {
+                poppins: ['Poppins', 'sans-serif'],
+                roboto: ['Roboto', 'sans-serif'],
             }
         }
     }

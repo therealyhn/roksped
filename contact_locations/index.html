@@ -10,10 +10,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../tailwind.config.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
-<body class="bg-lightGray">
+<body class="bg-lightGray font-poppins font-roboto">
 
     <!-- NAV -->
 
@@ -71,7 +73,8 @@
 
     <div class="absolute top-[16%] left-[50%] md:top-[26%] md:left-[20%] transform -translate-x-1/2 -translate-y-1/2
         md:flex flex-col md:w-1/2 z-40 w-2/3 text-center md:text-right">
-        <h1 class="text-2xl md:text-5xl lg:text-6xl font-bold text-primeYellow pb-1 border-b-2 border-primeGreen">
+        <h1
+            class="text-2xl md:text-5xl lg:text-6xl font-bold text-primeYellow pb-1 border-b-2 border-primeGreen font-roboto">
             KONTAKT &amp; LOKACIJE
         </h1>
         <h2 class="text-md md:text-lg lg:text-xl font-bold text-lightGray border-t-2 border-primeGreen">ROK ŠPED PLUS
@@ -86,8 +89,9 @@
 
             <!-- FORM -->
             <div class="w-full p-8 flex flex-col gap-6">
-                <div class="flex justify-center items-center gap-4">
-                    <h2 class=" text-2xl md:text-3xl font-semibold text-darkGray text-center uppercase">Kontaktirajte
+                <div class="flex justify-center items-center gap-5">
+                    <h2 class=" text-2xl md:text-3xl font-semibold text-darkGray text-center uppercase font-roboto">
+                        Kontaktirajte
                         Nas</h2>
                     <img src="../images/contact-mail.png" alt="" class="w-8 md:w-10">
                 </div>
@@ -111,7 +115,7 @@
 
                     <button type="submit" class="flex items-center justify-center gap-4 
                         mt-2 w-full md:w-1/2 bg-primeGreen text-white py-3 rounded-sm text-md font-semibold hover:bg-primeYellow 
-                        transition duration-300">
+                        transition duration-300 font-roboto">
                         POŠALJITE PORUKU
                         <img src="../images/send-msg.png" alt="" class="w-6 mt-1">
                     </button>
@@ -123,7 +127,8 @@
             <div class="w-full p-8 flex flex-col">
 
                 <div class="flex justify-center items-center gap-1 md:gap-4 mb-4">
-                    <h2 class="text-2xl md:text-3xl font-semibold text-darkGray text-center uppercase">Podaci za
+                    <h2 class="text-2xl md:text-3xl font-semibold text-darkGray text-center uppercase font-roboto">
+                        Podaci za
                         Identifikaciju
                     </h2>
                     <img src="../images/info.png" alt="" class=" w-8 md:w-9">
@@ -132,42 +137,42 @@
 
                 <div class="space-y-2">
                     <div class="flex flex-col justify-between items-left">
-                        <h3 class="font-bold text-darkGray">Naziv firme:</h3>
+                        <h3 class="font-bold text-darkGray font-roboto">Naziv firme:</h3>
                         <p class="text-gray-700">ROK ŠPED PLUS D.O.O. SMEDEREVO</p>
                     </div>
 
                     <div class="flex flex-col justify-between items-left">
-                        <h3 class="font-bold text-darkGray">Šifra Delatnosti:</h3>
+                        <h3 class="font-bold text-darkGray font-roboto">Šifra Delatnosti:</h3>
                         <p class="text-gray-700">5229</p>
                     </div>
 
                     <div class="flex flex-col justify-between items-left">
-                        <h3 class="font-bold text-darkGray">PIB:</h3>
+                        <h3 class="font-bold text-darkGray font-roboto">PIB:</h3>
                         <p class="text-gray-700">111326846</p>
                     </div>
 
                     <div class="flex flex-col justify-between items-left">
-                        <h3 class="font-bold text-darkGray">Matični broj:</h3>
+                        <h3 class="font-bold text-darkGray font-roboto">Matični broj:</h3>
                         <p class="text-gray-700">21462888</p>
                     </div>
 
                     <div class="flex flex-col justify-between items-left">
-                        <h3 class="font-bold text-darkGray">Sedište:</h3>
+                        <h3 class="font-bold text-darkGray font-roboto">Sedište:</h3>
                         <p class="text-gray-700">Kolarski Put 330, Sprat 3, Smederevo 11300, Srbija</p>
                     </div>
 
                     <div class="flex flex-col justify-between items-left">
-                        <h3 class="font-bold text-darkGray">Pravna forma:</h3>
+                        <h3 class="font-bold text-darkGray font-roboto">Pravna forma:</h3>
                         <p class="text-gray-700">Društvo sa ograničenom odgovornošću (D.O.O.)</p>
                     </div>
 
                     <div class="flex flex-col justify-between items-left">
-                        <h3 class="font-bold text-darkGray">Banka:</h3>
+                        <h3 class="font-bold text-darkGray font-roboto">Banka:</h3>
                         <p class="text-gray-700">Raiffeisen Bank</p>
                     </div>
 
                     <div class="flex flex-col justify-between items-left">
-                        <h3 class="font-bold text-darkGray">Broj računa:</h3>
+                        <h3 class="font-bold text-darkGray font-roboto">Broj računa:</h3>
                         <p class="text-gray-700">265-6410310004731-46</p>
                     </div>
                 </div>
@@ -184,71 +189,86 @@
 
             <!-- Location 1 -->
             <div class="flex flex-col space-y-4 text-center md:border-t-2 md:border-gray-300 pt-4">
-                <h3 class="text-primeGreen font-bold text-xl">Smederevo</h3>
+                <h3 class="text-primeGreen font-bold text-xl font-roboto">Smederevo</h3>
                 <div class="space-y-4">
-                    <p class="text-gray-700"><strong>Adresa:</strong><br>Kolarski Put 330, sprat 3<br>Smederevo 11300
+                    <p class="text-gray-700"><strong class="font-roboto">Adresa:</strong><br>Kolarski Put 330, sprat
+                        3<br>Smederevo 11300
                     </p>
-                    <p class="text-gray-900 font-semibold"><strong>Kontakt:</strong><br>Vasić Slađana<br>+381 64 32 040
+                    <p class="text-gray-900 font-semibold"><strong class="font-roboto">Kontakt:</strong><br>Vasić
+                        Slađana<br>+381 64 32 040
                         11</p>
                     <p class="text-gray-900 font-semibold">Dakić Vladimir<br>+381 64 65 953 69</p>
                     <p class="text-gray-500 text-sm">
-                        <strong>Email:</strong><br>office@roksped.rs<br>smederevo@roksped.rs
+                        <strong class="font-roboto">Email:</strong><br>office@roksped.rs<br>smederevo@roksped.rs
                     </p>
                 </div>
             </div>
 
             <!-- Location 2 -->
             <div class="flex flex-col space-y-4 text-center border-t-2 border-gray-300 pt-4">
-                <h3 class="text-primeGreen font-bold text-xl">Slobodna Zona Smed.</h3>
+                <h3 class="text-primeGreen font-bold text-xl font-roboto">Slobodna Zona Smed.</h3>
                 <div class="space-y-4">
-                    <p class="text-gray-700"><strong>Adresa:</strong><br>Đure Salaja 17<br>11300 Smederevo</p>
-                    <p class="text-gray-900 font-semibold"><strong>Kontakt:</strong><br>Zdravković Goca<br>+381 64 22
+                    <p class="text-gray-700"><strong class="font-roboto">Adresa:</strong><br>Đure Salaja 17<br>11300
+                        Smederevo</p>
+                    <p class="text-gray-900 font-semibold"><strong class="font-roboto">Kontakt:</strong><br>Zdravković
+                        Goca<br>+381 64 22
                         495 72</p>
                     <p class="text-gray-900 font-semibold">Dakić Biljana<br>+381 64 11 824 41</p>
                     <p class="text-gray-900 font-semibold">Vujović Milica<br>+381 66 80 372 42</p>
-                    <p class="text-gray-500 text-sm"><strong>Email:</strong><br>slobodnazona@roksped.rs</p>
+                    <p class="text-gray-500 text-sm"><strong
+                            class="font-roboto">Email:</strong><br>slobodnazona@roksped.rs</p>
                 </div>
             </div>
 
             <!-- Location 3 -->
             <div class="flex flex-col space-y-4 text-center border-t-2 border-gray-300 pt-4">
-                <h3 class="text-primeGreen font-bold text-xl">Mladenovac</h3>
+                <h3 class="text-primeGreen font-bold text-xl font-roboto">Mladenovac</h3>
                 <div class="space-y-4">
-                    <p class="text-gray-700"><strong>Adresa:</strong><br>Senaja, Senajska 2<br>11235 Mali Požarevac</p>
-                    <p class="text-gray-900 font-semibold"><strong>Kontakt:</strong><br>Đurić Mirjana<br>+381 64 82 549
+                    <p class="text-gray-700"><strong class="font-roboto">Adresa:</strong><br>Senaja, Senajska 2<br>11235
+                        Mali Požarevac</p>
+                    <p class="text-gray-900 font-semibold"><strong class="font-roboto">Kontakt:</strong><br>Đurić
+                        Mirjana<br>+381 64 82 549
                         82</p>
-                    <p class="text-gray-500 text-sm"><strong>Email:</strong><br>mladenovac@roksped.rs</p>
+                    <p class="text-gray-500 text-sm"><strong
+                            class="font-roboto">Email:</strong><br>mladenovac@roksped.rs</p>
                 </div>
             </div>
 
             <!-- Location 4 -->
             <div class="flex flex-col space-y-4 text-center border-t-2 border-gray-300 pt-4">
-                <h3 class="text-primeGreen font-bold text-xl">Smederevska Palanka</h3>
+                <h3 class="text-primeGreen font-bold text-xl font-roboto">Smederevska Palanka</h3>
                 <div class="space-y-4">
-                    <p class="text-gray-700"><strong>Adresa:</strong><br>Jozefa Šulca 22<br>(Carinski terminal)</p>
-                    <p class="text-gray-900 font-semibold"><strong>Kontakt:</strong><br>Vuletić Jelica<br>+381 64 64 854
+                    <p class="text-gray-700"><strong class="font-roboto">Adresa:</strong><br>Jozefa Šulca
+                        22<br>(Carinski terminal)</p>
+                    <p class="text-gray-900 font-semibold"><strong class="font-roboto">Kontakt:</strong><br>Vuletić
+                        Jelica<br>+381 64 64 854
                         06</p>
-                    <p class="text-gray-500 text-sm"><strong>Email:</strong><br>s.palanka@roksped.rs</p>
+                    <p class="text-gray-500 text-sm"><strong class="font-roboto">Email:</strong><br>s.palanka@roksped.rs
+                    </p>
                 </div>
             </div>
 
             <!-- Location 5 -->
             <div class="flex flex-col space-y-4 text-center border-t-2 border-gray-300 pt-4">
-                <h3 class="text-primeGreen font-bold text-xl">Transport</h3>
+                <h3 class="text-primeGreen font-bold text-xl font-roboto">Transport</h3>
                 <div class="space-y-4">
-                    <p class="text-gray-700"><strong>Adresa:</strong><br>Kolarski Put 330, sprat 3<br>Smederevo 11300
+                    <p class="text-gray-700"><strong class="font-roboto">Adresa:</strong><br>Kolarski Put 330, sprat
+                        3<br>Smederevo 11300
                     </p>
-                    <p class="text-gray-900 font-semibold"><strong>Kontakt:</strong><br>Bojanić Bojan<br>+381 64 13 09
+                    <p class="text-gray-900 font-semibold"><strong class="font-roboto">Kontakt:</strong><br>Bojanić
+                        Bojan<br>+381 64 13 09
                         794</p>
-                    <p class="text-gray-500 text-sm"><strong>Email:</strong><br>transport@roksped.rs</p>
+                    <p class="text-gray-500 text-sm"><strong class="font-roboto">Email:</strong><br>transport@roksped.rs
+                    </p>
                 </div>
             </div>
 
         </div>
         <div class="flex items-center justify-center">
-            <a href="../clients" class="px-3 py-2 bg-primeGreen font-semibold
+            <a href="../clients"
+                class="px-3 py-2 bg-primeGreen font-semibold
                  rounded-sm shadow-lg mt-16 md:mt-10 mb-4 md:mb-0
-                hover:bg-primeYellow hover:scale-105 transition duration-500 text-md text-lightGray mx-auto">
+                hover:bg-primeYellow hover:scale-105 transition duration-500 text-md text-lightGray mx-auto font-roboto">
                 NAŠI SARADNICI
             </a>
         </div>
@@ -265,35 +285,36 @@
         <div class="text-center flex items-center justify-center md:mx-auto">
             <div class="px-2 flex flex-col items-center">
                 <img src="../images/logo.png" alt="" class="md:w-40 w-28">
-                <p class="text-lightGray md:mt-2">Rok Šped Plus d.o.o.</p>
+                <p class="text-lightGray md:mt-2 font-roboto">Rok Šped Plus d.o.o.</p>
             </div>
 
             <div class="flex flex-col gap-2 items-left border-l-2 border-primeGreen md:pl-11 pl-2">
                 <div class="flex items-left gap-1 md:gap-5">
                     <img src="../images/phone-icon.png" alt="" class="w-6">
                     <p class="text-lightGray hover:text-primeGreen
-            transition duration-500">+381 64 13 09 794</p>
+                    transition duration-500 text-sm md:text-md">+381 64 13 09 794</p>
                 </div>
                 <div class="flex items-center gap-1 md:gap-5">
                     <img src="../images/email-icon.png" alt="" class="w-6">
                     <a href="mailto:office@roksped.rs" class="text-lightGray hover:text-primeGreen
-            transition duration-500">office@roksped.rs</a>
+                    transition duration-500 text-sm md:text-md">office@roksped.rs</a>
                 </div>
                 <div class="flex items-center gap-1 md:gap-5">
                     <img src="../images/location-icon.png" alt="" class="w-6">
                     <a href="https://maps.app.goo.gl/2z7FkEPnUddgFJTJ6" target="_blank" class="text-lightGray hover:text-primeGreen
-            transition duration-500">Kolarski Put 330, Smederevo</a>
+                    transition duration-500 text-sm md:text-md">Kolarski Put 330, Smederevo</a>
                 </div>
                 <div class="flex items-center gap-1 md:gap-5">
                     <img src="../images/web-icon.png" alt="" class="w-6">
                     <a href="https://roksped.rs" class="text-lightGray hover:text-primeGreen
-            transition duration-500">www.roksped.rs</a>
+                    transition duration-500 text-sm md:text-md">www.roksped.rs</a>
                 </div>
             </div>
         </div>
 
         <div class="flex flex-col items-center mt-5">
-            <p class="text-lightGray text-center">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
+            <p class="text-lightGray text-center font-roboto">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights
+                reserved.</p>
             <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank"
                     class="hover:underline">Jovan Ljusic</a></p>
         </div>
