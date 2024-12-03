@@ -22,7 +22,7 @@
     <nav id="nav" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between
     z-50 md:bg-opacity-70 bg-darkGray backdrop-blur-md">
 
-        <img src="../images/logo-nav.png" alt="logo" onclick="location.href='../index.html'"
+        <img src="../images/logo.png" alt="logo" onclick="location.href='../index.html'"
             class="w-20 cursor-pointer hover-custom-filter-logo transition duration-500">
 
         <ul id="menu-1"
@@ -34,15 +34,6 @@
                     Lokacije</a></li>
             <li><a href="../clients" class="hover:text-primeGreen transition duration-500">Saradnici</a></li>
         </ul>
-
-        <div class="hidden relative text-white flex items-center gap-5">
-            <!-- Language Toggle Button -->
-            <button id="language-button" class="flex items-center gap-1 justify-between">
-                <img src="../images/globe-icon.png" alt="language-change" class="w-8">
-                <span id="current-language" class="text-md">EN</span>
-            </button>
-        </div>
-
         <button
             class="flex flex-col items-center gap-1 w-10 block md:hidden hover-custom-filter-shadow transition duration-500"
             onclick="openMenu()">
@@ -53,7 +44,7 @@
         <ul id="side-menu"
             class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-primeGreen transition duration-500 text-transform: uppercase">
             <div class="absolute right-6 top-6" onclick="closeMenu()">
-                <img src="../images/close.png" alt="" class="w-5 cursor-pointer">
+                <img src="../images/close.png" alt="close" class="w-5 cursor-pointer">
             </div>
             <li><a href="../index.html" class="hover:text-primeYellow transition duration-500">Početna</a></li>
             <li><a href="../about" class="hover:text-primeYellow transition duration-500">O nama</a></li>
@@ -70,7 +61,7 @@
         <img src="../images/service-test.png" alt="Truck Image" class="w-full h-full object-cover">
     </div>
 
-    <div class="absolute top-[16%] left-[50%] md:top-[26%] md:left-[15%] transform -translate-x-1/2 -translate-y-1/2
+    <div class="absolute top-[18%] left-[50%] md:top-[26%] md:left-[15%] transform -translate-x-1/2 -translate-y-1/2
         md:flex flex-col z-40 md:w-1/2 w-2/3 text-center md:text-right">
         <h1
             class="text-3xl md:text-5xl lg:text-6xl font-bold text-primeYellow pb-1 border-b-2 border-primeGreen font-roboto">
@@ -85,7 +76,7 @@
 
     <div id="services" class="w-full grid grid-cols-1">
 
-        <div class="w-full max-w-5xl mx-auto md:pt-5 md:pb-10 relative">
+        <div class="w-full max-w-5xl mx-auto md:pt-5 md:pb-10 relative mb-2">
             <div class="flex flex-col ">
 
                 <p class="px-4 md:px-10 text-lg text-darkGray border-y-2 border-primeGreen py-3"> Profesionalna usluga
@@ -101,20 +92,14 @@
         <!-- DRUMSKI -->
         <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="w-full hidden md:block relative">
-                <img src="../images/drumski.png" alt="" class="w-full bg-cover bg-center bg-no-repeat">
+                <img src="../images/drumski.png" alt="road transport" class="w-full bg-cover bg-center bg-no-repeat">
                 <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-            </div>
-
-            <div class="hidden md:block absolute top-[92%] left-[40%] w-1/3 border-t-[5px] border-primeGreen">
-                <div class="absolute left-[-12px] bottom-[-22px] w-12 h-12 border-4 border-primeGreen rounded-full">
-                </div>
-                <div class="absolute left-0 bottom-[-10px] w-6 h-6 bg-primeGreen rounded-full"></div>
             </div>
 
             <div class="flex flex-col items-left gap-2 mx-10 md:mx-20 md:pt-10">
 
-                <div class="flex items-center gap-2 md:gap-10 mb-5">
-                    <img src="../images/road-icon.png" alt="" class="w-16 mt-10 md:mt-4">
+                <div class="flex items-center gap-2 md:gap-10 mb-5 border-t-2 border-primeGreen">
+                    <img src="../images/road-icon.png" alt="road icon" class="w-16 mt-10 md:mt-4">
                     <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-8 font-roboto">Drumski
                         transport
                     </h1>
@@ -131,10 +116,6 @@
                     <li>Puni ili delimični kamionski utovari</li>
                     <li>Zbirne kamionske pošiljke</li>
                 </ul>
-                <a href="../contact_locations"
-                    class="text-lg font-bold uppercase md:mt-14 mt-5 text-center text-primeGreen hover:text-primeYellow transition duration-500 font-roboto">
-                    Kontaktirajte nas
-                </a>
             </div>
         </div>
 
@@ -143,10 +124,10 @@
 
             <div class="flex flex-col items-left gap-2 mx-10 md:mx-20 pt-5">
 
-                <div class="flex items-center gap-10 mb-5 w-full md:ml-[200px]">
+                <div class="flex items-center gap-10 mb-5 w-full mt-4 border-t-2 border-primeGreen">
                     <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-10 md:mt-10 font-roboto">
                         Vodeni transport</h1>
-                    <img src="../images/ship-icon.png" alt="" class="w-20 mt-8 md:mt-0">
+                    <img src="../images/ship-icon.png" alt="ship icon" class="w-20 mt-8 md:mt-1">
                 </div>
 
                 <p class=" text-lg text-darkGray">
@@ -163,41 +144,25 @@
                     <li>Obezbeđenje adekvatnog tovarnog prostora na tržištu</li>
                     <li>Koordinaciju i sinhronizaciju rada svih učesnika u prevozu</li>
                 </ul>
-                <a href="../contact_locations"
-                    class="text-lg font-bold uppercase mt-4 text-center text-primeGreen hover:text-primeYellow transition duration-500 font-roboto">
-                    Kontaktirajte nas
-                </a>
             </div>
 
             <div class="w-full hidden md:block relative">
-                <img src="../images/vodeni.png" alt="" class="w-full bg-cover bg-center bg-no-repeat">
+                <img src="../images/vodeni.png" alt="water transport" class="w-full bg-cover bg-center bg-no-repeat">
                 <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-            </div>
-
-            <div class="hidden md:block absolute top-[155%] left-[25%] w-1/3 border-t-[5px] border-primeGreen">
-                <div class="absolute right-[-12px] bottom-[-22px] w-12 h-12 border-4 border-primeGreen rounded-full">
-                </div>
-                <div class="absolute right-0 bottom-[-10px] w-6 h-6 bg-primeGreen rounded-full"></div>
             </div>
         </div>
 
         <!-- AVIO -->
         <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="w-full hidden md:block relative">
-                <img src="../images/avio.png" alt="" class="w-full bg-cover bg-center bg-no-repeat">
+                <img src="../images/avio.png" alt="plane transport" class="w-full bg-cover bg-center bg-no-repeat">
                 <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-            </div>
-
-            <div class="hidden md:block absolute top-[220%] left-[40%] w-1/3 border-t-[5px] border-primeGreen">
-                <div class="absolute left-[-12px] bottom-[-22px] w-12 h-12 border-4 border-primeGreen rounded-full">
-                </div>
-                <div class="absolute left-0 bottom-[-10px] w-6 h-6 bg-primeGreen rounded-full"></div>
             </div>
 
             <div class="flex flex-col items-left gap-2 mx-10 md:mx-20 md:pt-0">
 
-                <div class="flex items-center gap-5 md:gap-10 mb-5">
-                    <img src="../images/avio-icon.png" alt="" class="w-16 mt-14 md:mt-6">
+                <div class="flex items-center gap-5 md:gap-10 mb-5 border-t-2 border-primeGreen mt-10">
+                    <img src="../images/avio-icon.png" alt="plane icon" class="w-16 mt-14 md:mt-6">
                     <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-14 font-roboto">Avio
                         transport</h1>
                 </div>
@@ -213,10 +178,7 @@
                     sve vrste dogovora. Cilj nam je da ispunimo sve vaše zahteve i sa ponosom vas dodamo
                     na listu naših zadovoljnih klijenata.
                 </p>
-                <a href="../contact_locations"
-                    class="text-lg font-bold mt-2 uppercase text-center text-primeGreen hover:text-primeYellow transition duration-500 font-roboto">
-                    Kontaktirajte nas
-                </a>
+
             </div>
         </div>
 
@@ -225,11 +187,11 @@
 
             <div class="flex flex-col items-left gap-2 mx-10 md:mx-20 pt-10">
 
-                <div class="flex items-center w-full gap-10 mb-5 md:ml-[130px]">
+                <div class="flex items-center w-full gap-10 mb-5 border-t-2 border-primeGreen">
                     <h1 class="text-3xl font-bold text-primeGreen text-transform: uppercase mt-8 font-roboto">Železnički
                         transport
                     </h1>
-                    <img src="../images/train-icon.png" alt="" class="w-16 md:mt-0 mt-8">
+                    <img src="../images/train-icon.png" alt="train icon" class="w-16 md:mt-1 mt-8">
                 </div>
 
                 <p class=" text-lg text-darkGray">
@@ -243,21 +205,18 @@
 
                 </p>
                 <a href="../contact_locations"
-                    class="text-lg font-bold uppercase text-center mt-5 md:mt-10 mb-10 text-primeGreen hover:text-primeYellow transition duration-500 font-roboto">
-                    Kontaktirajte nas
+                    class="px-3 py-2 bg-primeGreen font-semibold
+                 rounded-sm shadow-lg  mt-5 mb-10 md:mb-0
+                hover:bg-primeYellow hover:scale-105 transition duration-500 text-md text-lightGray mx-auto font-roboto">
+                    KONTAKTIRAJTE NAS
                 </a>
             </div>
 
             <div class="w-full hidden md:block relative">
-                <img src="../images/zeleznicki.png" alt="" class="w-full bg-cover bg-center bg-no-repeat">
+                <img src="../images/zeleznicki.png" alt="train transport" class="w-full bg-cover bg-center bg-no-repeat">
                 <div class="absolute inset-0 bg-black bg-opacity-30"></div>
             </div>
 
-            <div class="hidden md:block absolute top-[287%] left-[25%] w-1/3 border-t-[5px] border-primeGreen">
-                <div class="absolute right-[-12px] bottom-[-22px] w-12 h-12 border-4 border-primeGreen rounded-full">
-                </div>
-                <div class="absolute right-0 bottom-[-10px] w-6 h-6 bg-primeGreen rounded-full"></div>
-            </div>
         </div>
 
     </div>
@@ -266,7 +225,7 @@
     <div class="bg-darkGray py-4">
         <div class="text-center flex items-center justify-center md:mx-auto">
             <div class="px-2 flex flex-col items-center">
-                <img src="../images/logo.png" alt="" class="md:w-40 w-28">
+                <img src="../images/logo.png" alt="logo" class="md:w-40 w-28">
                 <p class="text-lightGray md:mt-2 font-roboto">Rok Šped Plus d.o.o.</p>
             </div>
 
@@ -284,7 +243,7 @@
                 <div class="flex items-center gap-1 md:gap-5">
                     <img src="../images/location-icon.png" alt="" class="w-6">
                     <a href="https://maps.app.goo.gl/2z7FkEPnUddgFJTJ6" target="_blank" class="text-lightGray hover:text-primeGreen
-                    transition duration-500 text-sm md:text-md">Kolarski Put 330, Smederevo</a>
+                    transition duration-500 text-sm md:text-md">Kolarski Put 330</a>
                 </div>
                 <div class="flex items-center gap-1 md:gap-5">
                     <img src="../images/web-icon.png" alt="" class="w-6">
