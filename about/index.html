@@ -10,7 +10,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../tailwind.config.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
@@ -18,7 +19,7 @@
 
     <!-- NAV -->
 
-    <nav id="nav" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between
+    <nav id="nav" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-1 flex items-center justify-between
          z-50 bg-darkGray md:bg-opacity-70 backdrop-blur-md hover-custom-filter">
 
         <img src="../images/logo.png" alt="logo" onclick="location.href='#top'"
@@ -68,19 +69,20 @@
 
     <div id="about" class="w-full min-h-screen relative">
 
-        <div class=" md:block w-full h-[200px] pt-10 md:pt-0 md:h-[350px]">
-            <img src="../images/truck1.jpg" alt="Truck Image" class="w-full h-full object-cover">
+        <div
+            class="w-full h-[200px] md:h-[350px] relative overflow-hidden bg-[url('../images/truck1.jpg')] bg-cover bg-center">
+
+            <div class="flex flex-col items-left md:w-11/12 mx-10 mt-[15%] md:mt-[9%] md:mx-[5%]">
+                <h1
+                    class="w-1/2 font-bold font-roboto text-4xl md:text-[64px] mt-8 md:mb-5 text-primeYellow uppercase">
+                    O nama</h1>
+                <div class="w-1/2 md:w-1/4 h-1 bg-primeGreen mb-1 pb-1"></div>
+                <h3 id="header-subtitle" class="text-xl md:text-3xl mb-5 font-semibold text-lightGray">ROK ŠPED PLUS
+                    SMEDEREVO</h3>
+            </div>
         </div>
 
-        <div class="absolute top-[7%] left-[50%] md:top-[20%] md:left-[15%] transform -translate-x-1/2 -translate-y-1/2 
-            text-center md:text-right
-            md:flex flex-col z-40 md:w-1/2 w-2/3">
-            <h1 class="text-3xl font-roboto md:text-5xl lg:text-6xl font-bold text-primeYellow pb-1 border-b-2 border-primeGreen">
-                O NAMA
-            </h1>
-            <h2 class="text-md md:text-lg lg:text-xl font-bold text-lightGray border-t-2 border-primeGreen">ROK ŠPED
-                PLUS SMEDEREVO</h2>
-        </div>
+
 
         <div class="w-11/12 max-w-5xl mx-auto md:pt-5 pb-10 relative">
             <div class="flex flex-col ">
@@ -125,8 +127,7 @@
                     <h1 class="text-lg pb-3 pt-2 text-primeGreen font-bold uppercase font-roboto">Sertifikacija</h1>
                     <a target="_blank"
                         href="https://verify.safesigned.com/certificate/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkb21haW4iOm51bGwsInJlZmVycmVyIjoid3d3Lmdvb2dsZS5jb20iLCJ2ZXJpZmllZCI6MCwic2NsX3R5cGUiOm51bGwsInNlYWxfc2hhcGUiOiI0IiwidGV4dF9pZCI6bnVsbCwibWluaWNvZGUiOm51bGwsInVybCI6Imh0dHA6Ly93d3cucm9rc3BlZC5ycy8iLCJ0b2tlbiI6IkYwRjAiLCJjb2Rpbmdfa2V5IjoiYmdiTm5uYmdNTExrS0tsIiwiY2VydGlmaWNhdGVfaWQiOjc0NjYsImNlcnRpZmljYXRlX3R5cGVfaWQiOjI0NCwiY2xpZW50X2lwIjoiMTg4LjI1NS4xNjQuMTQwIiwic2JfbG9nb19pZCI6bnVsbCwiaHR0cHNfdXNlZCI6ZmFsc2V9.dmbkiy8TKp0F3JfZa3FBzaxmhCUkSZLV7a4qZBOgaTY">
-                        <img src="../images/certificate-logo.png" alt=""
-                            class="w-40 mx-auto md:mx-0 md:mt-5"></a>
+                        <img src="../images/certificate-logo.png" alt="" class="w-40 mx-auto md:mx-0 md:mt-5"></a>
                 </div>
             </div>
         </div>
@@ -165,7 +166,8 @@
         </div>
 
         <div class="flex flex-col items-center mt-5">
-            <p class="text-lightGray text-center font-roboto">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
+            <p class="text-lightGray text-center font-roboto">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights
+                reserved.</p>
             <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank"
                     class="hover:underline">Jovan Ljusic</a></p>
         </div>

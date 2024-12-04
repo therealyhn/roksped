@@ -19,14 +19,14 @@
 
     <!-- NAV -->
 
-    <nav id="nav" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between
-        z-50 md:bg-opacity-70 bg-darkGray backdrop-blur-md">
+    <nav id="nav" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-1 flex items-center justify-between
+    z-50 bg-darkGray md:bg-opacity-70 backdrop-blur-md hover-custom-filter">
 
-        <img src="../images/logo.png" alt="logo" onclick="location.href='../index.html'"
+        <img src="../images/logo.png" alt="logo" onclick="location.href='#top'"
             class="w-20 cursor-pointer hover-custom-filter-logo transition duration-500">
 
-        <ul id="menu-1"
-            class="hidden md:flex items-center gap-5 lg:gap-6 text-white text-md font-semibold text-transform: uppercase">
+        <ul id="menu-1" class="hidden md:flex items-center gap-5 lg:gap-6 hover-custom-filter
+       text-white font-semibold text-md text-transform: uppercase">
             <li><a href="../index.html" class="hover:text-primeGreen transition duration-500">Početna</a></li>
             <li><a href="../about" class="hover:text-primeGreen transition duration-500">O nama</a></li>
             <li><a href="../services" class="hover:text-primeGreen transition duration-500">Usluge</a></li>
@@ -67,18 +67,16 @@
 
     <!-- HEADER -->
 
-    <div class=" md:block w-full h-[200px] pt-10 md:pt-0 md:h-[350px]">
-        <img src="../images/service-test.png" alt="Truck Image" class="w-full h-full object-cover">
-    </div>
+    <div
+        class="w-full h-[200px] md:h-[350px] relative overflow-hidden bg-[url('../images/service-test.png')] bg-cover bg-center">
 
-    <div class="absolute top-[18%] left-[50%] md:top-[26%] md:left-[20%] transform -translate-x-1/2 -translate-y-1/2
-        md:flex flex-col md:w-1/2 z-40 w-2/3 text-center md:text-right">
-        <h1
-            class="text-xl md:text-5xl lg:text-6xl font-bold text-primeYellow pb-1 border-b-2 border-primeGreen font-roboto">
-            KONTAKT &amp; LOKACIJE
-        </h1>
-        <h2 class="text-md md:text-lg lg:text-xl font-bold text-lightGray border-t-2 border-primeGreen">ROK ŠPED PLUS
-            SMEDEREVO</h2>
+        <div class="flex flex-col items-left md:w-11/12 mx-10 mt-[15%] md:mt-[9%] md:mx-[5%]">
+            <h1 class="w-1/2 font-bold font-roboto text-4xl md:text-[64px] mt-8 md:mb-5 text-primeYellow uppercase">
+                Kontakt &amp; Lokacije</h1>
+            <div class="w-1/2 md:w-1/4 h-1 bg-primeGreen mb-1 pb-1"></div>
+            <h3 id="header-subtitle" class="text-xl md:text-3xl mb-5 font-semibold text-lightGray">ROK ŠPED PLUS
+                SMEDEREVO</h3>
+        </div>
     </div>
 
     <!-- KONTAKT -->
