@@ -39,3 +39,7 @@
 .hover-custom-box-shadow-gradient{
     box-shadow: 6px 6px 8px rgba(0,0,0,0.3), 0 0 1px rgba(107,174,69,1), 0 0 1px rgb(159, 187, 1);
 }
+
+#loader-wrapper {
+    transition: opacity 0.5s ease-out;
+}

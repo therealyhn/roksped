@@ -17,7 +17,10 @@
 </head>
 
 <body class="bg-lightGray font-poppins" style="user-select: none;">
-
+    <!-- loader -->
+    <div id="loader-wrapper" class="fixed inset-0 bg-darkGray z-[9999] flex items-center justify-center">
+        <img src="images/loader.gif" alt="Loading..." class="w-32">
+    </div>
     <!-- NAV -->
     <nav id="nav"
         class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-1 flex items-center justify-between z-50 bg-darkGray backdrop-blur-md hover-custom-filter">
@@ -35,7 +38,8 @@
 
         <div class="relative text-white flex items-center gap-5">
 
-            <a href="https://verify.safesigned.com/certificate/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkb21haW4iOm51bGwsInJlZmVycmVyIjoid3d3Lmdvb2dsZS5jb20iLCJ2ZXJpZmllZCI6MCwic2NsX3R5cGUiOm51bGwsInNlYWxfc2hhcGUiOiI0IiwidGV4dF9pZCI6bnVsbCwibWluaWNvZGUiOm51bGwsInVybCI6Imh0dHA6Ly93d3cucm9rc3BlZC5ycy8iLCJ0b2tlbiI6IkYwRjAiLCJjb2Rpbmdfa2V5IjoiYmdiTm5uYmdNTExrS0tsIiwiY2VydGlmaWNhdGVfaWQiOjc0NjYsImNlcnRpZmljYXRlX3R5cGVfaWQiOjI0NCwiY2xpZW50X2lwIjoiMTg4LjI1NS4xNjQuMTQwIiwic2JfbG9nb19pZCI6bnVsbCwiaHR0cHNfdXNlZCI6ZmFsc2V9.dmbkiy8TKp0F3JfZa3FBzaxmhCUkSZLV7a4qZBOgaTY" target="_blank" class="hidden md:block hover-custom-filter-shadow transition duration-500">
+            <a href="https://verify.safesigned.com/certificate/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkb21haW4iOm51bGwsInJlZmVycmVyIjoid3d3Lmdvb2dsZS5jb20iLCJ2ZXJpZmllZCI6MCwic2NsX3R5cGUiOm51bGwsInNlYWxfc2hhcGUiOiI0IiwidGV4dF9pZCI6bnVsbCwibWluaWNvZGUiOm51bGwsInVybCI6Imh0dHA6Ly93d3cucm9rc3BlZC5ycy8iLCJ0b2tlbiI6IkYwRjAiLCJjb2Rpbmdfa2V5IjoiYmdiTm5uYmdNTExrS0tsIiwiY2VydGlmaWNhdGVfaWQiOjc0NjYsImNlcnRpZmljYXRlX3R5cGVfaWQiOjI0NCwiY2xpZW50X2lwIjoiMTg4LjI1NS4xNjQuMTQwIiwic2JfbG9nb19pZCI6bnVsbCwiaHR0cHNfdXNlZCI6ZmFsc2V9.dmbkiy8TKp0F3JfZa3FBzaxmhCUkSZLV7a4qZBOgaTY"
+                target="_blank" class="hidden md:block hover-custom-filter-shadow transition duration-500">
                 <img src="images/certificate.png" alt="" class="w-20 opacity-100">
             </a>
 
@@ -68,12 +72,14 @@
             <div class="flex flex-col items-center md:w-11/12 mx-10 md:mt-[7%] md:mx-[5%]">
                 <img src="./images/logo.png" alt="logo" class="hover-custom-filter transition duration-500 w-[600px]">
                 <h1 id="header-title"
-                    class="font-bold font-roboto text-4xl md:text-[64px] mt-8 mb-5 text-white text-transform: uppercase">Rok Šped
+                    class="font-bold font-roboto text-4xl md:text-[64px] mt-8 mb-5 text-white text-transform: uppercase">
+                    Rok Šped
                     Plus D.O.O.</h1>
                 <h3 id="header-subtitle" class="text-xl md:text-3xl mb-5 font-semibold text-lightGray">Medjunarodna
                     Špedicija i Transport</h3>
                 <p id="header-location"
-                    class="max-w-2xl mx-auto text-primeYellow font-semibold mb-5 text-lg md:text-2xl"> Smederevo, Srbija</p>
+                    class="max-w-2xl mx-auto text-primeYellow font-semibold mb-5 text-lg md:text-2xl"> Smederevo, Srbija
+                </p>
             </div>
             <a href="about"
                 class="px-6 py-3 font-roboto bg-primeGreen font-semibold rounded-sm hover:scale-105 hover-custom-filter transition duration-500 text-md text-lightGray hover:bg-primeYellow">
@@ -115,7 +121,8 @@
         </div>
 
         <div class="flex flex-col items-center mt-5">
-            <p class="text-lightGray text-center font-roboto">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights reserved.</p>
+            <p class="text-lightGray text-center font-roboto">Copyright &copy; 2024 Rok Šped Plus D.O.O. All rights
+                reserved.</p>
             <p class="text-primeGreen">Designed by <a href="https://jovanljusic.com" target="_blank"
                     class="hover:underline">Jovan Ljusic</a></p>
         </div>
